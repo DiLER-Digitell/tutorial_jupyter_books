@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Creating automatically gradable coding assignments using nbgrader &#8212; Creating Educational Content with Jupyter Books</title>
+    <title>Structuring Content using the Table of Contents &#8212; Creating Educational Content with Jupyter Books</title>
   
   
   
@@ -65,10 +65,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'content/3_create/nbgrader';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/3_create/setup-files';</script>
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Quick Setup Guide for Deploying Courses using Jupyter Book on Github" href="../4_additional/quick_tutorial.html" />
+    <link rel="prev" title="Making Books truly interactive" href="interactive.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -175,7 +177,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../../intro/overview.html">Course Overview &amp; Procedure</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Creating interactive content with Jupyter Books</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../intro/whyjb.html">Why Jupyter Books? An Introduction</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../1_github/intro.html">Getting Started with GitHub</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../1_github/account.html">Setting Up a GitHub Account</a></li>
@@ -186,11 +188,11 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../2_host/troubleshooting.html">Troubleshooting</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="intro.html">Create Content</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="intro.html">Create Content</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="markdown.html">Styling: The Look and Feel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="media.html">Media: Images, Videos &amp; More</a></li>
 <li class="toctree-l2"><a class="reference internal" href="interactive.html">Making Books truly interactive</a></li>
-<li class="toctree-l2"><a class="reference internal" href="setup-files.html">Structuring Content using the Table of Contents</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Structuring Content using the Table of Contents</a></li>
 </ul>
 </li>
 </ul>
@@ -250,55 +252,6 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
-<div class="dropdown dropdown-launch-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
-    <i class="fas fa-rocket"></i>
-  </button>
-  <ul class="dropdown-menu">
-      
-      
-      
-      <li><a href="https://mybinder.org/v2/gh/DiLER-Digitell/tutorial_jupyter_books/main?urlpath=lab/tree/docs/content/3_create/nbgrader.ipynb" target="_blank"
-   class="btn btn-sm dropdown-item"
-   title="Launch onBinder"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  
-    <img src="../../_static/images/logo_binder.svg">
-  </span>
-<span class="btn__text-container">Binder</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li>
-<button onclick="initThebeSBT()"
-  class="btn btn-sm btn-launch-thebe dropdown-item"
-  title="Launch Thebe"
-  data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-play"></i>
-  </span>
-<span class="btn__text-container">Live Code</span>
-</button>
-</li>
-      
-  </ul>
-</div>
-
-
-
-
-
-
 <div class="dropdown dropdown-source-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
     <i class="fab fa-github"></i>
@@ -324,7 +277,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/DiLER-Digitell/tutorial_jupyter_books/edit/main/docs/content/3_create/nbgrader.ipynb" target="_blank"
+      <li><a href="https://github.com/DiLER-Digitell/tutorial_jupyter_books/edit/main/docs/content/3_create/setup-files.md" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -341,7 +294,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/DiLER-Digitell/tutorial_jupyter_books/issues/new?title=Issue%20on%20page%20%2Fcontent/3_create/nbgrader.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/DiLER-Digitell/tutorial_jupyter_books/issues/new?title=Issue%20on%20page%20%2Fcontent/3_create/setup-files.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -371,7 +324,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/content/3_create/nbgrader.ipynb" target="_blank"
+      <li><a href="../../_sources/content/3_create/setup-files.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -381,7 +334,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.ipynb</span>
+<span class="btn__text-container">.md</span>
 </a>
 </li>
       
@@ -442,7 +395,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -453,11 +408,21 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Creating automatically gradable coding assignments using nbgrader</h1>
+    <h1>Structuring Content using the Table of Contents</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adapting-the-toc-yml-table-of-contents">Adapting the toc.yml/Table of Contents</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#autogenerate-the-table-of-contents-from-a-list-of-files">Autogenerate the Table of Contents from a list of files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-section">Next section</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -467,19 +432,138 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="creating-automatically-gradable-coding-assignments-using-nbgrader">
-<h1>Creating automatically gradable coding assignments using nbgrader<a class="headerlink" href="#creating-automatically-gradable-coding-assignments-using-nbgrader" title="Permalink to this heading">#</a></h1>
-<p>Grading assignments can feel like a time-consuming chore. This is where automatic grading programs come in handy, although most grading solutions are constrained to a certain data format or are costly.</p>
-<p>One free solution to this is <a class="reference external" href="https://nbgrader.readthedocs.io/en/stable/">nbgrader</a>, a tool to tool for creating and grading assignments in Jupyter notebooks.
-Nbgrader allows instructors to create assignments with coding exercises, written responses, and other types of questions, but it mainly focuses on the automatic grading of programming tasks. Written or free-text responses will still have to be evaluated by hand. Nbgrader is, therefore, particularly useful for courses in statistics or data science.
-Unfortunately, there is also no way of integrating nbgrader into this online course structure. If you plan on using nbgrader, you’d therefore need to send out and collect the assignments from your students via e-mail, discord, etc.</p>
-<p><strong>For an introduction and demonstration of nbgrader’s core functionality, check out the Scipy 2017 talk by <a class="reference external" href="http://www.jesshamrick.com/">Jessica Hamrick</a></strong></p>
-<iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="788.54" height="443" type="text/html" src="https://www.youtube.com/embed/5WUm0QuJdFw?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=http://youtubeembedcode.com"></iframe>
-<p>There are two great <strong>in-depth tutorials on how to create and grade assignments using nbgrader</strong> out there. Do check them and their philosophy out if you want to implement this approach in your work:</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="structuring-content-using-the-table-of-contents">
+<h1>Structuring Content using the Table of Contents<a class="headerlink" href="#structuring-content-using-the-table-of-contents" title="Permalink to this heading">#</a></h1>
+<p>In order to build your book, Jupyter Book needs to know how you want to structure the content that you have created, that is:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://doc.cocalc.com/teaching-nbgrader.html#">Teaching with nbgrader (Collaborative Calculation and Data Science; cocalc)</a></p></li>
-<li><p><a class="reference external" href="https://nbgrader.readthedocs.io/en/stable/index.html#">Nbgrader Docs</a></p></li>
+<li><p><strong>Which files should be displayed on your website?</strong></p></li>
+<li><p><strong>In which order should the pages appear?</strong></p></li>
+<li><p><strong>In what form should the content be displayed?</strong></p></li>
 </ul>
+<p>The answers to these questions are written in a <code class="docutils literal notranslate"><span class="pre">YAML</span></code> file called <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code>, which defines the <code class="docutils literal notranslate"><span class="pre">Table</span> <span class="pre">of</span> <span class="pre">Contents</span></code>, as well as the formatting of your book. It can be found in, e.g., the lecture folder of the <a class="reference external" href="https://github.com/M-earnest/course_template_diler">template</a>. The <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code>, therefore, defines the structure of your course website.</p>
+<p>In the simplest form, the <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> looks like this:</p>
+<div class="highlight-format: notranslate"><div class="highlight"><pre><span></span>root: index`
+chapters:
+- file: path/to/chapter1
+- file: path/to/chapter2
+  sections:
+  - file: path/to/chapter2/section1
+</pre></div>
+</div>
+<p>While this might seem overwhelming at first, it is actually really simple. Below, you’ll find a short description of the keys. Keys are words, helping Jupyter Book to understand what you are expressing in the ToC.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Key</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">format:</span></code></p></td>
+<td><p><em>Format</em> defines how the ToC will be interpreted. For our purposes, <code class="docutils literal notranslate"><span class="pre">jb-book</span></code> will be the appropriate option.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">root:</span></code></p></td>
+<td><p><em>Root</em> defines the landing (aka first) page of your book. The paths that you define will be relative to the root.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">chapters:</span></code></p></td>
+<td><p>Contains a list of files. No argument is needed here</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">file:</span></code></p></td>
+<td><p>Path to the files that you want to include in your book. All the paths are relative to the root.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">sections:</span></code></p></td>
+<td><p>Defines sections of a chapter.</p></td>
+</tr>
+</tbody>
+</table>
+<p>Furthermore, you can also <strong>subdivide chapters into parts</strong> using the <code class="docutils literal notranslate"><span class="pre">parts:</span></code> argument:</p>
+<div class="highlight-format: notranslate"><div class="highlight"><pre><span></span>root: index
+parts:
+  - caption: Name of Part 1
+    chapters:
+    - file: path/to/part1/chapter1
+    - file: path/to/part1/chapter2
+      sections:
+      - file: path/to/part1/chapter2/section1
+  - caption: Name of Part 2
+    chapters:
+    - file: path/to/part2/chapter1
+    - file: path/to/part2/chapter2
+      sections:
+      - file: path/to/part2/chapter2/section1
+</pre></div>
+</div>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Key</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">parts:</span></code></p></td>
+<td><p>Parts can further subdivide and group chapters and, thus, consist of a list of chapters.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Note
+The chapter names displayed on your website are defined by the top-level heading of the respective document. For instance, for this page, the top-level header looks like this: <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">Structuring</span> <span class="pre">Content</span> <span class="pre">using</span> <span class="pre">the</span> <span class="pre">Table</span> <span class="pre">of</span> <span class="pre">Contents</span></code></p>
+</div>
+<section id="adapting-the-toc-yml-table-of-contents">
+<h2>Adapting the toc.yml/Table of Contents<a class="headerlink" href="#adapting-the-toc-yml-table-of-contents" title="Permalink to this heading">#</a></h2>
+<p>To add your course content, simply provide the path to your newly created or adapted file, including the respective filename to this document. For this, you can simply copy-paste the existing lines of the provided “toc.yml” and exchange the example filenames with your own filenames. It is further easiest if you simply adapt the <code class="docutils literal notranslate"><span class="pre">index.md</span></code> file provided with our template as the <code class="docutils literal notranslate"><span class="pre">&quot;root&quot;</span></code>, i.e. the landing page of a website.</p>
+<p>In practice, the provided structure for our template looks like the following.</p>
+<p>Where our <a class="reference external" href="https://github.com/M-earnest/course_template_diler/blob/master/lecture/_toc.yml">“toc.yml”</a> looks like this:</p>
+</br>
+<img src="https://github.com/felixkoerber/jb/blob/main/static/template_toc.png?raw=true" alt="depicting an example of a new repository" class="bg-primary" width="500px">
+</br>
+<p>and results in this site layout:</p>
+</br>
+<img src="https://github.com/felixkoerber/jb/blob/main/static/template_layout.png?raw=true" alt="depicting an example of a new repository" class="bg-primary" width="500px">
+<hr class="docutils" />
+</section>
+<section id="autogenerate-the-table-of-contents-from-a-list-of-files">
+<h2>Autogenerate the Table of Contents from a list of files<a class="headerlink" href="#autogenerate-the-table-of-contents-from-a-list-of-files" title="Permalink to this heading">#</a></h2>
+<p>While we generally recommend customizing the ToC yourself using the template we provide, Jupyter Book also offers a built-in function that generates the Table of Content based on filenames of your content.</p>
+<p>To use this, enter the following code into the terminal of your liking:</p>
+<p><code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">toc</span> <span class="pre">from-project</span> <span class="pre">path/to/book</span> <span class="pre">-f</span> <span class="pre">[jb-book/jb-article]</span></code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Note
+To use this command, open your OS-respective Terminal, and copy the path to where your files are as an argument (here displayed as “path/to/book”)</p>
+</div>
+<p>This function will search your respective path for content files and generate the <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> based on the content files. Keep in mind that:</p>
+<ul class="simple">
+<li><p>Each sub-folder must have at least one content file inside it</p></li>
+<li><p>The ordering of files in <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> will depend on the alphanumeric order of the filenames (e.g., <code class="docutils literal notranslate"><span class="pre">folder_01</span></code> comes before <code class="docutils literal notranslate"><span class="pre">folder_02</span></code>, and <code class="docutils literal notranslate"><span class="pre">apage</span></code> comes before <code class="docutils literal notranslate"><span class="pre">b_page</span></code>)</p></li>
+<li><p>If there is a file called <code class="docutils literal notranslate"><span class="pre">index.md</span></code> in any folder, it will be listed first.</p></li>
+</ul>
+<p>In addition to that, there are a few arguments you can add to the command to control the generation, which are outlined below:</p>
+<div class="highlight-Usage: notranslate"><div class="highlight"><pre><span></span>
+  Create a ToC file from a project directory.
+
+Options:
+  -e, --extension TEXT            File extensions to consider as documents
+                                  (use multiple times)  [default: .rst, .md]
+  -i, --index TEXT                File name (without suffix) considered as the
+                                  index file in a folder  [default: index]
+  -s, --skip-match TEXT           File/Folder names which match will be
+                                  ignored (use multiple times)  [default: .*]
+  -t, --guess-titles              Guess titles of documents from path names
+  -f, --file-format [default|jb-book|jb-article]
+                                  The key-mappings to use.  [default: default]
+  -h, --help                      Show this message and exit.
+</pre></div>
+</div>
+<p>While this should cover the basics, feel free to check out <a class="reference external" href="https://jupyterbook.org/en/stable/structure/toc.html">Jupyter Book’s Manual</a> for further information.</p>
+</section>
+<section id="next-section">
+<h2>Next section<a class="headerlink" href="#next-section" title="Permalink to this heading">#</a></h2>
+<p><span class="xref myst">Publishing</span></p>
+<ul class="simple">
+<li><p><span class="xref myst">Build and publish your course</span></p></li>
+</ul>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -512,12 +596,46 @@ Unfortunately, there is also no way of integrating nbgrader into this online cou
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="interactive.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Making Books truly interactive</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../4_additional/quick_tutorial.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Quick Setup Guide for Deploying Courses using Jupyter Book on Github</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adapting-the-toc-yml-table-of-contents">Adapting the toc.yml/Table of Contents</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#autogenerate-the-table-of-contents-from-a-list-of-files">Autogenerate the Table of Contents from a list of files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-section">Next section</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
