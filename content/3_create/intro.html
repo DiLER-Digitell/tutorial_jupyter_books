@@ -419,10 +419,9 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#goals">Goals</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#first-things-first">First things first</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iypbn-vs-md-when-should-we-use-what">.iypbn vs .md - When should we use what?</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#different-file-types-for-various-purposes">Different File Types for Various Purposes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-new-file">Create a New File</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-section">Next Section:</a></li>
 </ul>
             </nav>
         </div>
@@ -436,7 +435,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="creating-engaging-content">
 <h1>Creating Engaging Content<a class="headerlink" href="#creating-engaging-content" title="Permalink to this heading">#</a></h1>
-<p><strong>Jupyter Book</strong> allows for the integration of various markup languages and formats, including Markdown files, Jupyter notebooks, MyST Markdown notebooks, reStructured Text, and more.</p>
+<p><strong>Jupyter Book</strong> allows for the integration of various markup languages and formats, including Markdown files, Jupyter notebooks, MyST Markdown notebooks, reStructured Text, and more. In this chapter, you will learn how to create content that is engaging to the user.</p>
 <section id="goals">
 <h2>Goals<a class="headerlink" href="#goals" title="Permalink to this heading">#</a></h2>
 <p>This chapter aims to include the following goals.</p>
@@ -448,14 +447,11 @@ document.write(`
 <li><p>Learn how to include feedback questions.</p></li>
 <li><p>Learn how to set up an online repository (your course).</p></li>
 </ol>
-<p>MyST is a markup language that draws inspiration from RMarkdown and is fully integrated for use with Jupyter Book. It allows for more advanced formatting options and the ability to include interactive elements, such as widgets and code snippets, within your content. Jupyter Book is able to parse MyST in both .ipybn and .md files, allowing for flexible content creation.</p>
-<p>Here, we present only a short overview of the features of MyST. However, there is much more documentation on <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/syntax/syntax.html#syntax-core">the MyST website.</a></p>
 </section>
-<section id="first-things-first">
-<h2>First things first<a class="headerlink" href="#first-things-first" title="Permalink to this heading">#</a></h2>
-<p>Open up Visual Studio Code (or Jupyter Lab if you prefer using that). Create a new file by clicking on “File” and then on “New File.” Here, you can choose which file format you want to choose. Choose .iypbn for interactive Files or create a new <a class="reference external" href="http://one.md">one.md</a> (Markdown) file in the folder for your project.</p>
-<section id="iypbn-vs-md-when-should-we-use-what">
-<h3>.iypbn vs .md - When should we use what?<a class="headerlink" href="#iypbn-vs-md-when-should-we-use-what" title="Permalink to this heading">#</a></h3>
+<section id="different-file-types-for-various-purposes">
+<h2>Different File Types for Various Purposes<a class="headerlink" href="#different-file-types-for-various-purposes" title="Permalink to this heading">#</a></h2>
+<p>In this tutorial, we will focus on using Markdown (.md) files, as Markdown is a powerful and easy-to-learn formatting language. It is ideal for primarily text-based content, as well as for embedding multimedia such as images and videos. If you want to include code and visualizations for scientific computing, we recommend using Jupyter Notebook (.ipynb) files.</p>
+<p>Here’s an overview of both file types:</p>
 <div class="tab-set docutils">
 <input checked="True" class="tab-input" id="tab-set--0-input--1" name="tab-set--0" type="radio"><label class="tab-label" for="tab-set--0-input--1">.ipynb</label><div class="tab-content docutils">
 <p><code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> files are Jupyter Notebook files and are primarily used for interactive data science and scientific computing. They allow for the combination of code, text, and visualizations all in one place, making it easy to document and share code-driven projects. They are often used by data scientists and researchers to share their work with others and can be easily converted to other formats like .html or .pdf for sharing.</p>
@@ -467,6 +463,18 @@ document.write(`
 </div>
 </div>
 </section>
+<section id="create-a-new-file">
+<h2>Create a New File<a class="headerlink" href="#create-a-new-file" title="Permalink to this heading">#</a></h2>
+<p>To create a new file, click on “Add file” on the upper-right corner, then select “Create new file”.</p>
+<p><img alt="Image of the &quot;add file&quot; button and the &quot;create new file&quot; option." src="static/new_file" /></p>
+<p>Next, give your file a name and specify the file type, such as “<a class="reference external" href="http://introduction.md">introduction.md</a>” to create a Markdown file.</p>
+<p><img alt="Image of the field where the file name is entered, with &quot;introduction.md&quot; written in it." src="static/include_type" /></p>
+<p>Now, you can add your content to the file.</p>
+</section>
+<section id="next-section">
+<h2>Next Section:<a class="headerlink" href="#next-section" title="Permalink to this heading">#</a></h2>
+<p>In both .ipybn and .md files, Jupyter Book is able to parse MyST, a markup language that draws inspiration from RMarkdown. It allows for more advanced formatting options and the ability to include interactive elements, such as widgets and code snippets, within your content.</p>
+<p>In the next section, we present only a short overview of the features of MyST. However, there is much more documentation on <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/syntax/syntax.html#syntax-core">the MyST website.</a></p>
 </section>
 <div class="toctree-wrapper compound">
 </div>
@@ -536,10 +544,9 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#goals">Goals</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#first-things-first">First things first</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iypbn-vs-md-when-should-we-use-what">.iypbn vs .md - When should we use what?</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#different-file-types-for-various-purposes">Different File Types for Various Purposes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-new-file">Create a New File</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-section">Next Section:</a></li>
 </ul>
   </nav></div>
 
