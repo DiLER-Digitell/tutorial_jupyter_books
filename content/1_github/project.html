@@ -422,7 +422,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-new-repository">Create a New Repository</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-the-course-template">Working With the Course Template</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fork-the-course-template">1. Fork the Course Template</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-familiar-with-the-structure-and-existing-files">2. Getting Familiar with the Structure and Existing Files</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-familiar-with-the-structure-and-the-existing-files">2. Getting Familiar with the Structure and the Existing Files</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#make-your-first-adjustments">3. Make Your First Adjustments</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-readme">The README</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-license">The LICENSE</a></li>
@@ -454,7 +454,6 @@ document.write(`
 <li><p>Fill out the repository details: Give your repository a name, description, and check the box next to “public” to make sure others can find your directory.</p></li>
 </ol>
 <p>This could look something like this:</p>
-<img src="https://diler-digitell.github.io/tutorial_jupyter_books/static/new_repo_example.png?raw=true" alt="depicting an example of a new repository" class="bg-primary" width="500px">
 <p><img alt="depicting an example of a new repository" src="https://diler-digitell.github.io/tutorial_jupyter_books/static/new_repo_example.png" /></p>
 <ol class="arabic simple" start="4">
 <li><p>Check the box “Add a README file”, this will initiate your repository with a file that can later be used to display basic information to others viewing your repo.</p></li>
@@ -469,34 +468,34 @@ document.write(`
 <p>To work with our materials, you need to “fork” (i.e., copy) the course template repository to your account:</p>
 <section id="fork-the-course-template">
 <h3>1. Fork the Course Template<a class="headerlink" href="#fork-the-course-template" title="Permalink to this heading">#</a></h3>
-<p>Head over to the <a class="reference external" href="https://github.com/DiLER-Digitell/Course-template">course template repo</a>, and on the upper right-hand side, click “fork”.</p>
-<img src="https://github.com/DiLER-Digitell/Jupyter-Book/main/static/fork_button.png?raw=true" alt="depicting position a look of the fork button on a GitHub repository" class="bg-primary" width="500px">
-<p>You’ll be asked to create a new fork; simply add a new repository name, provide a short description, or keep the existing one, check the box “Copy the main branch only,” and click the “create fork” button.</p>
-<img src="https://github.com/DiLER-Digitell/Jupyter-Book/main/static/create_fork.png?raw=true" alt=" depicting position a look of the fork button on a GitHub repository" class="bg-primary" width="500px">
+<p>Head over to the <a class="reference external" href="https://github.com/DiLER-Digitell/Course-template">course template repo</a>, and on the upper right-hand side, click “Fork”.</p>
+<img src="../../static/fork_button.png?raw=true" alt="depicting position a look of the fork button on a GitHub repository" class="bg-primary" width="500px">
+<p>You’ll be asked to create a new fork; simply add a new repository name, provide a short description, or keep the existing one, check the box “Copy the main branch only,” and click the “Create fork” button.</p>
+<img src="../../static/create_fork.png?raw=true" alt=" depicting position a look of the fork button on a GitHub repository" class="bg-primary" width="500px">
 <p>Now you created your own course repository!</p>
 </section>
-<section id="getting-familiar-with-the-structure-and-existing-files">
-<h3>2. Getting Familiar with the Structure and Existing Files<a class="headerlink" href="#getting-familiar-with-the-structure-and-existing-files" title="Permalink to this heading">#</a></h3>
+<section id="getting-familiar-with-the-structure-and-the-existing-files">
+<h3>2. Getting Familiar with the Structure and the Existing Files<a class="headerlink" href="#getting-familiar-with-the-structure-and-the-existing-files" title="Permalink to this heading">#</a></h3>
 <p><strong>The course template is structured in the following way</strong></p>
-<img src="https://github.com/DiLER-Digitell/Jupyter-Book/main/static/repo.png?raw=true" alt="depicting the contents of the course template repository on GitHub" class="bg-primary" width="500px">
+<img src="../../static/repo.png?raw=true" alt="depicting the contents of the course template repository on GitHub" class="bg-primary" width="500px">
 <p>Where:</p>
 <ul class="simple">
-<li><p><strong>.github/workflows folder</strong>: contains the prewritten scripts to automatically create your website every time new content is pushed online.</p></li>
-<li><p><strong>lecture</strong>: contains all our content files and directories, as well as the “toc.yml” and the “config.yml” files, which define the structure and functionality of the website.</p></li>
-<li><p><strong>README</strong>: a short explanation of your website/course.</p></li>
-<li><p><strong>LICENSE</strong>: self-explanatory, stating who and how people are allowed to use or reproduce the content of this repo.</p></li>
-<li><p><strong>requirements.txt</strong>: contains the necessary requirements for the automatic scripts building the website to run; there is no need to change anything here.</p></li>
+<li><p><strong>.github/workflows folder</strong>: Contains the prewritten scripts to automatically create your website every time new content is added.</p></li>
+<li><p><strong>lecture</strong>: Contains all our content files and directories, as well as the “toc.yml” (transcript of records) and the “config.yml” files, which define the structure and functionality of the website.</p></li>
+<li><p><strong>README</strong>: A short explanation of your website/course.</p></li>
+<li><p><strong>LICENSE</strong>: Self-explanatory, stating who and how people are allowed to use or reproduce the content of this repo.</p></li>
+<li><p><strong>requirements.txt</strong>: Contains the necessary requirements for the automatic scripts building the website to run; there is no need to change anything here.</p></li>
 </ul>
-<p>Now, most the things that you’ll be adapting are contained in the content folder “lecture”, which looks like this.</p>
-<img src="https://github.com/DiLER-Digitell/Jupyter-Book/main/static/lecture_folder.png?raw=true" alt="depicting the contents of the course template repository on GitHub" class="bg-primary" width="500px">
+<p>Now, most the things that you’ll be adapting are contained in the content folder “lecture”, which looks like this:</p>
+<img src="../../static/lecture_folder.png?raw=true" alt="depicting the contents of the course template repository on GitHub" class="bg-primary" width="500px">
 <p>Where:</p>
 <ul class="simple">
 <li><p><strong>content</strong>: Contains files making up the main content of a course website.</p></li>
 <li><p><strong>general information</strong>: Contains files providing information, such as the necessary setup, the outline of the course, a code of conduct, etc. The included “<a class="reference external" href="http://index.md">index.md</a>” file will be the landing point of the course website.</p></li>
 <li><p><strong>introduction</strong>: Contains files making up the introductory sessions of a course.</p></li>
-<li><p><strong>static</strong>: Contains all the pictures and graphs contained in a course. It’s recommended that should you add new files. e.g., a course logo to this folder.</p></li>
-<li><p><strong>config.yml</strong>: Contains the course title, authors, and copyright notice at the footer of the website, which you should change before hosting your website. Further, it contains the specifics for the technical implementations of a course, e.g., whether Jupyter notebooks should be re-run every time the course website is created  by the GitHub workflow or, e.g., whether a course incorporated interactive elements.</p></li>
-<li><p><strong>toc.yml</strong>: Contains information on the structure of the course website. For an in-depth explanation, jump to the <a class="reference external" href="https://diler-digitell.github.io/Jupyter-Book/content/setup-files.html">respective section</a>.</p></li>
+<li><p><strong>static</strong>: Contains all the pictures and graphs contained in a course.</p></li>
+<li><p><strong>config.yml</strong>: Contains the course title, authors, and copyright notice at the footer of the website, which you should change before hosting your website. Further, it contains the specifics for the technical implementations of a course, e.g., whether Jupyter notebooks should be re-run every time the course website is created by the GitHub workflow or, e.g., whether a course incorporated interactive elements.</p></li>
+<li><p><strong>toc.yml</strong>: Contains information on the structure of the course website. For an in-depth explanation, jump to the <span class="xref myst">respective section</span>.</p></li>
 </ul>
 <br>
 </section>
@@ -507,15 +506,15 @@ document.write(`
 <section id="the-readme">
 <h4>The README<a class="headerlink" href="#the-readme" title="Permalink to this heading">#</a></h4>
 <p>To actually display the purpose and, e.g., acknowledgments of your course, you’ll have to adapt the “<a class="reference external" href="http://README.md">README.md</a>” file on your public repo. In the template, this looks like this:</p>
-<img src="https://github.com/DiLER-Digitell/Jupyter-Book/main/static/readme.png?raw=true" alt=" depicting the README" class="bg-primary" width="500px">
+<img src="../../static/readme.png?raw=true" alt=" depicting the README" class="bg-primary" width="500px">
 <p>and translates to this view at the bottom of your public remote repo:</p>
-<img src="https://github.com/DiLER-Digitell/Jupyter-Book/main/static/readme_rendered.png?raw=true" alt=" depicting the rendered README" class="bg-primary" width="500px">
+<img src="../../static/readme_rendered.png?raw=true" alt=" depicting the rendered README" class="bg-primary" width="500px">
 <p>So simply add the name and explanation of your course, your credentials, and, e.g., how others may get in contact with you to the <a class="reference external" href="http://README.md">README.md</a>. Please keep the credit included to our original G0RELLA template lectures.</p>
 </section>
 <section id="the-license">
 <h4>The LICENSE<a class="headerlink" href="#the-license" title="Permalink to this heading">#</a></h4>
 <p>You may further change the contained LICENSE file to your liking as long as you respect the stated stipulations.</p>
-<img src="https://github.com/DiLER-Digitell/Jupyter-Book/main/static/license.png?raw=true" alt=" depicting the LICENSE of the course template" class="bg-primary" width="500px">
+<img src="../../static/license.png?raw=true" alt=" depicting the LICENSE of the course template" class="bg-primary" width="500px">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Redistribution</span> <span class="ow">and</span> <span class="n">use</span> <span class="ow">in</span> <span class="n">source</span> <span class="ow">and</span> <span class="n">binary</span> <span class="n">forms</span><span class="p">,</span> <span class="k">with</span> <span class="ow">or</span> <span class="n">without</span>
 <span class="n">modification</span><span class="p">,</span> <span class="n">are</span> <span class="n">permitted</span> <span class="n">provided</span> <span class="n">that</span> <span class="n">the</span> <span class="n">following</span> <span class="n">conditions</span> <span class="n">are</span> <span class="n">met</span><span class="p">:</span>
 
@@ -536,12 +535,6 @@ document.write(`
 <section id="next-chapter">
 <h4>Next Chapter:<a class="headerlink" href="#next-chapter" title="Permalink to this heading">#</a></h4>
 <p>In the next chapter, you will discover how to publish and maintain your own course website.</p>
-<p>Of course, you can start to add markdown files or Jupyter Notebook files in e.g., the introduction or content folder according to your needs or simply adapt the already existing files.</p>
-<p>You will learn how to modify this template and add files according to your needs in the chapter on <a class="reference external" href="https://diler-digitell.github.io/Jupyter-Book/content/create/intro.html">“Creating Content”</a>.</p>
-<p>Next, you want to add all your new files to your “toc.yml” file, as described here:</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://felixkoerber.github.io/jb/tutorialcontent/structure.html">Structuring content</a></p></li>
-</ul>
 </section>
 </section>
 </section>
@@ -613,7 +606,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-new-repository">Create a New Repository</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-the-course-template">Working With the Course Template</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fork-the-course-template">1. Fork the Course Template</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-familiar-with-the-structure-and-existing-files">2. Getting Familiar with the Structure and Existing Files</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-familiar-with-the-structure-and-the-existing-files">2. Getting Familiar with the Structure and the Existing Files</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#make-your-first-adjustments">3. Make Your First Adjustments</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-readme">The README</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-license">The LICENSE</a></li>
