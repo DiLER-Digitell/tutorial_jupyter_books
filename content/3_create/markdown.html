@@ -493,11 +493,11 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nested-lists">(Nested) Lists</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#horizontal-lines">Horizontal Lines</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blockquotes">Blockquotes</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#embedded-code">Embedded code</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-latex">Writing latex</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-in-the-notebook">Plotting in the notebook</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#special-content-blocks-directives-and-roles">Special Content Blocks - Directives and Roles</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#directives">Directives</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#embedded-code">Embedded Code</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-latex">Writing Latex</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-in-the-notebook">Plotting in the Notebook</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#special-content-blocks-directives-and-roles">Special Content Blocks - Directives and Roles</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#directives">Directives</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#roles">Roles</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#what-roles-and-directives-are-available">What Roles and Directives are available?</a></li>
 </ul>
@@ -656,7 +656,7 @@ Complex is better than complicated.</p>
 </div></blockquote>
 </section>
 <section id="embedded-code">
-<h3>Embedded code<a class="headerlink" href="#embedded-code" title="Permalink to this heading">#</a></h3>
+<h3>Embedded Code<a class="headerlink" href="#embedded-code" title="Permalink to this heading">#</a></h3>
 <p>You can embed code meant for illustration instead of execution in Python by adding `` around statements:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>`def f(x):`
 ` return x**2`
@@ -673,7 +673,7 @@ Complex is better than complicated.</p>
 <code>def f(x): return x**2</code></p>
 </section>
 <section id="writing-latex">
-<h3>Writing latex<a class="headerlink" href="#writing-latex" title="Permalink to this heading">#</a></h3>
+<h3>Writing Latex<a class="headerlink" href="#writing-latex" title="Permalink to this heading">#</a></h3>
 <p>Let’s use <code class="docutils literal notranslate"><span class="pre">%%</span></code> to render a block of <code class="docutils literal notranslate"><span class="pre">latex</span></code>:</p>
 <table class="table">
 <thead>
@@ -689,7 +689,7 @@ Complex is better than complicated.</p>
 </table>
 </section>
 <section id="plotting-in-the-notebook">
-<h3>Plotting in the notebook<a class="headerlink" href="#plotting-in-the-notebook" title="Permalink to this heading">#</a></h3>
+<h3>Plotting in the Notebook<a class="headerlink" href="#plotting-in-the-notebook" title="Permalink to this heading">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">Notebooks</span></code> support a variety of fantastic <code class="docutils literal notranslate"><span class="pre">plotting</span> <span class="pre">options</span></code>, including <code class="docutils literal notranslate"><span class="pre">static</span></code> and <code class="docutils literal notranslate"><span class="pre">interactive</span></code> graphics. This <code class="docutils literal notranslate"><span class="pre">magic</span></code> configures <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> to <code class="docutils literal notranslate"><span class="pre">render</span></code> its <code class="docutils literal notranslate"><span class="pre">figures</span></code> <code class="docutils literal notranslate"><span class="pre">inline</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -743,9 +743,8 @@ Complex is better than complicated.</p>
 <section id="special-content-blocks-directives-and-roles">
 <h3>Special Content Blocks - Directives and Roles<a class="headerlink" href="#special-content-blocks-directives-and-roles" title="Permalink to this heading">#</a></h3>
 <p>Directives and Roles are somewhat similiar to functions for markup language and allow for specific customizations of the look and feel of your book. Both accept various kinds of inputs, which are explained in further detail below.</p>
-</section>
 <section id="directives">
-<h3>Directives<a class="headerlink" href="#directives" title="Permalink to this heading">#</a></h3>
+<h4>Directives<a class="headerlink" href="#directives" title="Permalink to this heading">#</a></h4>
 <p>With directives, you can adjust the look and feel of your Jupyter Book.</p>
 <p>Directives are written like this:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{mydirectivename}
@@ -763,6 +762,7 @@ Here is a note
 <p class="admonition-title">Note</p>
 <p>Here is a note</p>
 </div>
+</section>
 <section id="roles">
 <h4>Roles<a class="headerlink" href="#roles" title="Permalink to this heading">#</a></h4>
 <p>Roles are very similar in usage. However, they are somewhat simpler and are limited to one line.</p>
@@ -861,11 +861,11 @@ Here is a note
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nested-lists">(Nested) Lists</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#horizontal-lines">Horizontal Lines</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blockquotes">Blockquotes</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#embedded-code">Embedded code</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-latex">Writing latex</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-in-the-notebook">Plotting in the notebook</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#special-content-blocks-directives-and-roles">Special Content Blocks - Directives and Roles</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#directives">Directives</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#embedded-code">Embedded Code</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-latex">Writing Latex</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-in-the-notebook">Plotting in the Notebook</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#special-content-blocks-directives-and-roles">Special Content Blocks - Directives and Roles</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#directives">Directives</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#roles">Roles</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#what-roles-and-directives-are-available">What Roles and Directives are available?</a></li>
 </ul>
