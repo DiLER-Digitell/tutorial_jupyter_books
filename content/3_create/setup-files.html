@@ -420,8 +420,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adapting-the-toc-yml-table-of-contents">Adapting the toc.yml/Table of Contents</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#autogenerate-the-table-of-contents-from-a-list-of-files">Autogenerate the Table of Contents from a list of files</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-section">Next section</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-section">Next Section:</a></li>
 </ul>
             </nav>
         </div>
@@ -441,14 +440,15 @@ document.write(`
 <li><p><strong>In which order should the pages appear?</strong></p></li>
 <li><p><strong>In what form should the content be displayed?</strong></p></li>
 </ul>
-<p>The answers to these questions are written in a <code class="docutils literal notranslate"><span class="pre">YAML</span></code> file called <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code>, which defines the <code class="docutils literal notranslate"><span class="pre">Table</span> <span class="pre">of</span> <span class="pre">Contents</span></code>, as well as the formatting of your book. It can be found in, e.g., the lecture folder of the <a class="reference external" href="https://github.com/M-earnest/course_template_diler">template</a>. The <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code>, therefore, defines the structure of your course website.</p>
+<p>The answers to these questions are written in a <code class="docutils literal notranslate"><span class="pre">YAML</span></code> file called <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code>, which defines the <strong>Table of Contents</strong> (ToC), as well as the formatting of your book. It can be found in, e.g., the lecture folder of the <a class="reference external" href="https://github.com/DiLER-Digitell/course-template">template</a>. The <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code>, therefore, defines the structure of your course website.</p>
 <p>In the simplest form, the <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> looks like this:</p>
-<div class="highlight-format: notranslate"><div class="highlight"><pre><span></span>root: index`
-chapters:
-- file: path/to/chapter1
-- file: path/to/chapter2
-  sections:
-  - file: path/to/chapter2/section1
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">format</span><span class="p">:</span> <span class="n">jb</span><span class="o">-</span><span class="n">book</span>
+<span class="n">root</span><span class="p">:</span> <span class="n">index</span>
+<span class="n">chapters</span><span class="p">:</span>
+<span class="o">-</span> <span class="n">file</span><span class="p">:</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">chapter1</span>
+<span class="o">-</span> <span class="n">file</span><span class="p">:</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">chapter2</span>
+  <span class="n">sections</span><span class="p">:</span>
+  <span class="o">-</span> <span class="n">file</span><span class="p">:</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">chapter2</span><span class="o">/</span><span class="n">section1</span>
 </pre></div>
 </div>
 <p>While this might seem overwhelming at first, it is actually really simple. Below, you’ll find a short description of the keys. Keys are words, helping Jupyter Book to understand what you are expressing in the ToC.</p>
@@ -459,38 +459,39 @@ chapters:
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">format:</span></code></p></td>
-<td><p><em>Format</em> defines how the ToC will be interpreted. For our purposes, <code class="docutils literal notranslate"><span class="pre">jb-book</span></code> will be the appropriate option.</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">format</span></code></p></td>
+<td><p>Format defines how the ToC will be interpreted. For our purposes, <code class="docutils literal notranslate"><span class="pre">jb-book</span></code> is the appropriate option.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">root:</span></code></p></td>
-<td><p><em>Root</em> defines the landing (aka first) page of your book. The paths that you define will be relative to the root.</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">root</span></code></p></td>
+<td><p>Root defines the landing (aka first) page of your book.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">chapters:</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">chapters</span></code></p></td>
 <td><p>Contains a list of files. No argument is needed here</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">file:</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">file</span></code></p></td>
 <td><p>Path to the files that you want to include in your book. All the paths are relative to the root.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">sections:</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">sections</span></code></p></td>
 <td><p>Defines sections of a chapter.</p></td>
 </tr>
 </tbody>
 </table>
 <p>Furthermore, you can also <strong>subdivide chapters into parts</strong> using the <code class="docutils literal notranslate"><span class="pre">parts:</span></code> argument:</p>
-<div class="highlight-format: notranslate"><div class="highlight"><pre><span></span>root: index
-parts:
-  - caption: Name of Part 1
-    chapters:
-    - file: path/to/part1/chapter1
-    - file: path/to/part1/chapter2
-      sections:
-      - file: path/to/part1/chapter2/section1
-  - caption: Name of Part 2
-    chapters:
-    - file: path/to/part2/chapter1
-    - file: path/to/part2/chapter2
-      sections:
-      - file: path/to/part2/chapter2/section1
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">format</span><span class="p">:</span> <span class="n">jb</span><span class="o">-</span><span class="n">book</span>
+<span class="n">root</span><span class="p">:</span> <span class="n">index</span>
+<span class="n">parts</span><span class="p">:</span>
+  <span class="o">-</span> <span class="n">caption</span><span class="p">:</span> <span class="n">Name</span> <span class="n">of</span> <span class="n">Part</span> <span class="mi">1</span>
+    <span class="n">chapters</span><span class="p">:</span>
+    <span class="o">-</span> <span class="n">file</span><span class="p">:</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">part1</span><span class="o">/</span><span class="n">chapter1</span>
+    <span class="o">-</span> <span class="n">file</span><span class="p">:</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">part1</span><span class="o">/</span><span class="n">chapter2</span>
+      <span class="n">sections</span><span class="p">:</span>
+      <span class="o">-</span> <span class="n">file</span><span class="p">:</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">part1</span><span class="o">/</span><span class="n">chapter2</span><span class="o">/</span><span class="n">section1</span>
+  <span class="o">-</span> <span class="n">caption</span><span class="p">:</span> <span class="n">Name</span> <span class="n">of</span> <span class="n">Part</span> <span class="mi">2</span>
+    <span class="n">chapters</span><span class="p">:</span>
+    <span class="o">-</span> <span class="n">file</span><span class="p">:</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">part2</span><span class="o">/</span><span class="n">chapter1</span>
+    <span class="o">-</span> <span class="n">file</span><span class="p">:</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">part2</span><span class="o">/</span><span class="n">chapter2</span>
+      <span class="n">sections</span><span class="p">:</span>
+      <span class="o">-</span> <span class="n">file</span><span class="p">:</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">part2</span><span class="o">/</span><span class="n">chapter2</span><span class="o">/</span><span class="n">section1</span>
 </pre></div>
 </div>
 <table class="table">
@@ -500,70 +501,32 @@ parts:
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">parts:</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">parts</span></code></p></td>
 <td><p>Parts can further subdivide and group chapters and, thus, consist of a list of chapters.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">caption</span></code></p></td>
+<td><p>Name of the parts.</p></td>
 </tr>
 </tbody>
 </table>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Note
-The chapter names displayed on your website are defined by the top-level heading of the respective document. For instance, for this page, the top-level header looks like this: <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">Structuring</span> <span class="pre">Content</span> <span class="pre">using</span> <span class="pre">the</span> <span class="pre">Table</span> <span class="pre">of</span> <span class="pre">Contents</span></code></p>
+<p>The chapter names displayed on your website are defined by the top-level heading of the respective file. For instance, for this page, the top-level header looks like this: <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">Structuring</span> <span class="pre">Content</span> <span class="pre">using</span> <span class="pre">the</span> <span class="pre">Table</span> <span class="pre">of</span> <span class="pre">Contents</span></code></p>
 </div>
 <section id="adapting-the-toc-yml-table-of-contents">
 <h2>Adapting the toc.yml/Table of Contents<a class="headerlink" href="#adapting-the-toc-yml-table-of-contents" title="Permalink to this heading">#</a></h2>
 <p>To add your course content, simply provide the path to your newly created or adapted file, including the respective filename to this document. For this, you can simply copy-paste the existing lines of the provided “toc.yml” and exchange the example filenames with your own filenames. It is further easiest if you simply adapt the <code class="docutils literal notranslate"><span class="pre">index.md</span></code> file provided with our template as the <code class="docutils literal notranslate"><span class="pre">&quot;root&quot;</span></code>, i.e. the landing page of a website.</p>
 <p>In practice, the provided structure for our template looks like the following.</p>
-<p>Where our <a class="reference external" href="https://github.com/M-earnest/course_template_diler/blob/master/lecture/_toc.yml">“toc.yml”</a> looks like this:</p>
-</br>
-<img src="https://github.com/felixkoerber/jb/blob/main/static/template_toc.png?raw=true" alt="depicting an example of a new repository" class="bg-primary" width="500px">
-</br>
+<p>Where our <a class="reference external" href="https://github.com/DiLER-Digitell/course-template/lecture/_toc.yml">“toc.yml”</a> looks like this:</p>
+<p><img alt="Image of the YAML-file with the transcript of records of the course template" src="../../_images/template_toc.png" /></p>
 <p>and results in this site layout:</p>
-</br>
-<img src="https://github.com/felixkoerber/jb/blob/main/static/template_layout.png?raw=true" alt="depicting an example of a new repository" class="bg-primary" width="500px">
+<p><img alt="Image of the structure of the transcript of records of the course template" src="../../_images/template_layout.png" /></p>
 <hr class="docutils" />
-</section>
-<section id="autogenerate-the-table-of-contents-from-a-list-of-files">
-<h2>Autogenerate the Table of Contents from a list of files<a class="headerlink" href="#autogenerate-the-table-of-contents-from-a-list-of-files" title="Permalink to this heading">#</a></h2>
-<p>While we generally recommend customizing the ToC yourself using the template we provide, Jupyter Book also offers a built-in function that generates the Table of Content based on filenames of your content.</p>
-<p>To use this, enter the following code into the terminal of your liking:</p>
-<p><code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">toc</span> <span class="pre">from-project</span> <span class="pre">path/to/book</span> <span class="pre">-f</span> <span class="pre">[jb-book/jb-article]</span></code></p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Note
-To use this command, open your OS-respective Terminal, and copy the path to where your files are as an argument (here displayed as “path/to/book”)</p>
-</div>
-<p>This function will search your respective path for content files and generate the <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> based on the content files. Keep in mind that:</p>
-<ul class="simple">
-<li><p>Each sub-folder must have at least one content file inside it</p></li>
-<li><p>The ordering of files in <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> will depend on the alphanumeric order of the filenames (e.g., <code class="docutils literal notranslate"><span class="pre">folder_01</span></code> comes before <code class="docutils literal notranslate"><span class="pre">folder_02</span></code>, and <code class="docutils literal notranslate"><span class="pre">apage</span></code> comes before <code class="docutils literal notranslate"><span class="pre">b_page</span></code>)</p></li>
-<li><p>If there is a file called <code class="docutils literal notranslate"><span class="pre">index.md</span></code> in any folder, it will be listed first.</p></li>
-</ul>
-<p>In addition to that, there are a few arguments you can add to the command to control the generation, which are outlined below:</p>
-<div class="highlight-Usage: notranslate"><div class="highlight"><pre><span></span>
-  Create a ToC file from a project directory.
-
-Options:
-  -e, --extension TEXT            File extensions to consider as documents
-                                  (use multiple times)  [default: .rst, .md]
-  -i, --index TEXT                File name (without suffix) considered as the
-                                  index file in a folder  [default: index]
-  -s, --skip-match TEXT           File/Folder names which match will be
-                                  ignored (use multiple times)  [default: .*]
-  -t, --guess-titles              Guess titles of documents from path names
-  -f, --file-format [default|jb-book|jb-article]
-                                  The key-mappings to use.  [default: default]
-  -h, --help                      Show this message and exit.
-</pre></div>
-</div>
 <p>While this should cover the basics, feel free to check out <a class="reference external" href="https://jupyterbook.org/en/stable/structure/toc.html">Jupyter Book’s Manual</a> for further information.</p>
 </section>
 <section id="next-section">
-<h2>Next section<a class="headerlink" href="#next-section" title="Permalink to this heading">#</a></h2>
-<p><span class="xref myst">Publishing</span></p>
-<ul class="simple">
-<li><p><span class="xref myst">Build and publish your course</span></p></li>
-</ul>
+<h2>Next Section:<a class="headerlink" href="#next-section" title="Permalink to this heading">#</a></h2>
+<p>In the next section, we will recap what you have learned in this course and provide information on how to reach us if you encounter any issues.</p>
 </section>
 </section>
 
@@ -631,8 +594,7 @@ Options:
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adapting-the-toc-yml-table-of-contents">Adapting the toc.yml/Table of Contents</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#autogenerate-the-table-of-contents-from-a-list-of-files">Autogenerate the Table of Contents from a list of files</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-section">Next section</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-section">Next Section:</a></li>
 </ul>
   </nav></div>
 
