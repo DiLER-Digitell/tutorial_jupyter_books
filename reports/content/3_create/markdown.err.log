@@ -35,11 +35,26 @@ fig.show()
 
 
 [0;31m---------------------------------------------------------------------------[0m
-[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
-Cell [0;32mIn[4], line 1[0m
-[0;32m----> 1[0m [38;5;28;01mimport[39;00m[38;5;250m [39m[38;5;21;01mplotly[39;00m[38;5;21;01m.[39;00m[38;5;21;01mfigure_factory[39;00m[38;5;250m [39m[38;5;28;01mas[39;00m[38;5;250m [39m[38;5;21;01mff[39;00m
-[1;32m      3[0m [38;5;66;03m# Add histogram data[39;00m
-[1;32m      4[0m x1 [38;5;241m=[39m np[38;5;241m.[39mrandom[38;5;241m.[39mrandn([38;5;241m200[39m) [38;5;241m-[39m [38;5;241m2[39m
+[0;31mImportError[0m                               Traceback (most recent call last)
+Cell [0;32mIn[4], line 15[0m
+[1;32m     12[0m group_labels [38;5;241m=[39m [[38;5;124m'[39m[38;5;124mGroup 1[39m[38;5;124m'[39m, [38;5;124m'[39m[38;5;124mGroup 2[39m[38;5;124m'[39m, [38;5;124m'[39m[38;5;124mGroup 3[39m[38;5;124m'[39m, [38;5;124m'[39m[38;5;124mGroup 4[39m[38;5;124m'[39m]
+[1;32m     14[0m [38;5;66;03m# Create distplot with custom bin_size[39;00m
+[0;32m---> 15[0m fig [38;5;241m=[39m [43mff[49m[38;5;241;43m.[39;49m[43mcreate_distplot[49m[43m([49m[43mhist_data[49m[43m,[49m[43m [49m[43mgroup_labels[49m[43m,[49m[43m [49m[43mbin_size[49m[38;5;241;43m=[39;49m[38;5;241;43m.2[39;49m[43m)[49m
+[1;32m     16[0m fig[38;5;241m.[39mshow()
 
-[0;31mModuleNotFoundError[0m: No module named 'plotly'
+File [0;32m/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/plotly/figure_factory/_distplot.py:178[0m, in [0;36mcreate_distplot[0;34m(hist_data, group_labels, bin_size, curve_type, colors, rug_text, histnorm, show_hist, show_curve, show_rug)[0m
+[1;32m    175[0m [38;5;28;01mif[39;00m rug_text [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m:
+[1;32m    176[0m     rug_text [38;5;241m=[39m []
+[0;32m--> 178[0m [43mvalidate_distplot[49m[43m([49m[43mhist_data[49m[43m,[49m[43m [49m[43mcurve_type[49m[43m)[49m
+[1;32m    179[0m utils[38;5;241m.[39mvalidate_equal_length(hist_data, group_labels)
+[1;32m    181[0m [38;5;28;01mif[39;00m [38;5;28misinstance[39m(bin_size, ([38;5;28mfloat[39m, [38;5;28mint[39m)):
+
+File [0;32m/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/plotly/figure_factory/_distplot.py:47[0m, in [0;36mvalidate_distplot[0;34m(hist_data, curve_type)[0m
+[1;32m     42[0m     [38;5;28;01mraise[39;00m exceptions[38;5;241m.[39mPlotlyError(
+[1;32m     43[0m         [38;5;124m"[39m[38;5;124mcurve_type must be defined as [39m[38;5;124m"[39m [38;5;124m"[39m[38;5;124m'[39m[38;5;124mkde[39m[38;5;124m'[39m[38;5;124m or [39m[38;5;124m'[39m[38;5;124mnormal[39m[38;5;124m'[39m[38;5;124m"[39m
+[1;32m     44[0m     )
+[1;32m     46[0m [38;5;28;01mif[39;00m [38;5;129;01mnot[39;00m scipy:
+[0;32m---> 47[0m     [38;5;28;01mraise[39;00m [38;5;167;01mImportError[39;00m([38;5;124m"[39m[38;5;124mFigureFactory.create_distplot requires scipy[39m[38;5;124m"[39m)
+
+[0;31mImportError[0m: FigureFactory.create_distplot requires scipy
 
