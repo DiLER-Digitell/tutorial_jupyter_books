@@ -254,55 +254,6 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
-<div class="dropdown dropdown-launch-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
-    <i class="fas fa-rocket"></i>
-  </button>
-  <ul class="dropdown-menu">
-      
-      
-      
-      <li><a href="https://mybinder.org/v2/gh/DiLER-Digitell/tutorial_jupyter_books/main?urlpath=lab/tree/docs/content/3_create/markdown.ipynb" target="_blank"
-   class="btn btn-sm dropdown-item"
-   title="Launch onBinder"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  
-    <img src="../../_static/images/logo_binder.svg">
-  </span>
-<span class="btn__text-container">Binder</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li>
-<button onclick="initThebeSBT()"
-  class="btn btn-sm btn-launch-thebe dropdown-item"
-  title="Launch Thebe"
-  data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-play"></i>
-  </span>
-<span class="btn__text-container">Live Code</span>
-</button>
-</li>
-      
-  </ul>
-</div>
-
-
-
-
-
-
 <div class="dropdown dropdown-source-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
     <i class="fab fa-github"></i>
@@ -328,7 +279,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/DiLER-Digitell/tutorial_jupyter_books/edit/main/docs/content/3_create/markdown.ipynb" target="_blank"
+      <li><a href="https://github.com/DiLER-Digitell/tutorial_jupyter_books/edit/main/docs/content/3_create/markdown.md" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -375,7 +326,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/content/3_create/markdown.ipynb" target="_blank"
+      <li><a href="../../_sources/content/3_create/markdown.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -385,7 +336,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.ipynb</span>
+<span class="btn__text-container">.md</span>
 </a>
 </li>
       
@@ -469,7 +420,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formatting-text">Formatting Text</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formatting-text">Formatting Text</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#headings">Headings</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#italic">Italic</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bold">Bold</a></li>
 </ul>
@@ -477,16 +429,9 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nested-lists">(Nested) Lists</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#horizontal-lines">Horizontal Lines</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#blockquotes">Blockquotes</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#headings">Headings</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#embedded-code">Embedded code</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-latex">Writing latex</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-in-the-notebook">Plotting in the notebook</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#special-content-blocks-directives-and-roles">Special Content Blocks - Directives and Roles</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#directives">Directives</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#roles">Roles</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-roles-and-directives-are-available">What Roles and Directives are available?</a></li>
-</ul>
-</li>
 </ul>
             </nav>
         </div>
@@ -506,6 +451,19 @@ Luckily, Jupyter Book has plenty of different options to format text, including 
 <section id="formatting-text">
 <h2>Formatting Text<a class="headerlink" href="#formatting-text" title="Permalink to this heading">#</a></h2>
 <p>Let’s start with the fundamentals:</p>
+</section>
+<section id="headings">
+<h2>Headings<a class="headerlink" href="#headings" title="Permalink to this heading">#</a></h2>
+<p>You can add headings using Markdown’s syntax by adding <code class="docutils literal notranslate"><span class="pre">#</span></code> before your heading. You can vary the heading level by increasing the amount of Hash signs:</p>
+<pre>
+# Heading 1
+
+# Heading 2
+
+## Heading 2.1
+
+## Heading 2.2
+</pre>
 <section id="italic">
 <h3>Italic<a class="headerlink" href="#italic" title="Permalink to this heading">#</a></h3>
 <p>To make a text <em>italic</em> add <code class="docutils literal notranslate"><span class="pre">_</span></code> or <code class="docutils literal notranslate"><span class="pre">*</span></code> before and after the word:</p>
@@ -602,18 +560,6 @@ Simple is better than complex.
 Complex is better than complicated.</p>
 </div></blockquote>
 </section>
-<section id="headings">
-<h2>Headings<a class="headerlink" href="#headings" title="Permalink to this heading">#</a></h2>
-<p>You can add headings using Markdown’s syntax by adding <code class="docutils literal notranslate"><span class="pre">#</span></code> before your heading. You can vary the heading level by increasing the amount of Hash signs:</p>
-<pre>
-# Heading 1
-
-# Heading 2
-
-## Heading 2.1
-
-## Heading 2.2
-</pre></section>
 <section id="embedded-code">
 <h2>Embedded code<a class="headerlink" href="#embedded-code" title="Permalink to this heading">#</a></h2>
 <p>You can embed code meant for illustration instead of execution in Python by adding `` before statements:</p>
@@ -641,102 +587,9 @@ Since you need to add this line by line, this might ruin your code formatting. I
 <section id="plotting-in-the-notebook">
 <h2>Plotting in the notebook<a class="headerlink" href="#plotting-in-the-notebook" title="Permalink to this heading">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">Notebooks</span></code> support a variety of fantastic <code class="docutils literal notranslate"><span class="pre">plotting</span> <span class="pre">options</span></code>, including <code class="docutils literal notranslate"><span class="pre">static</span></code> and <code class="docutils literal notranslate"><span class="pre">interactive</span></code> graphics. This <code class="docutils literal notranslate"><span class="pre">magic</span></code> configures <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> to <code class="docutils literal notranslate"><span class="pre">render</span></code> its <code class="docutils literal notranslate"><span class="pre">figures</span></code> <code class="docutils literal notranslate"><span class="pre">inline</span></code>:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="s2">&quot;%matplotlib inline&quot;</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">300</span><span class="p">)</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;A little chirp&quot;</span><span class="p">)</span>
-<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gcf</span><span class="p">()</span>  <span class="c1"># let&#39;s keep the figure object around for later...</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">plotly.figure_factory</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">ff</span>
-
-<span class="c1"># Add histogram data</span>
-<span class="n">x1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span> <span class="o">-</span> <span class="mi">2</span>
-<span class="n">x2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
-<span class="n">x3</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span> <span class="o">+</span> <span class="mi">2</span>
-<span class="n">x4</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span> <span class="o">+</span> <span class="mi">4</span>
-
-<span class="c1"># Group data together</span>
-<span class="n">hist_data</span> <span class="o">=</span> <span class="p">[</span><span class="n">x1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">x3</span><span class="p">,</span> <span class="n">x4</span><span class="p">]</span>
-
-<span class="n">group_labels</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Group 1&#39;</span><span class="p">,</span> <span class="s1">&#39;Group 2&#39;</span><span class="p">,</span> <span class="s1">&#39;Group 3&#39;</span><span class="p">,</span> <span class="s1">&#39;Group 4&#39;</span><span class="p">]</span>
-
-<span class="c1"># Create distplot with custom bin_size</span>
-<span class="n">fig</span> <span class="o">=</span> <span class="n">ff</span><span class="o">.</span><span class="n">create_distplot</span><span class="p">(</span><span class="n">hist_data</span><span class="p">,</span> <span class="n">group_labels</span><span class="p">,</span> <span class="n">bin_size</span><span class="o">=</span><span class="mf">.2</span><span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="special-content-blocks-directives-and-roles">
-<h2>Special Content Blocks - Directives and Roles<a class="headerlink" href="#special-content-blocks-directives-and-roles" title="Permalink to this heading">#</a></h2>
-<p>Directives and Roles are somewhat similiar to functions for markup language and allow for specific customizations of the look and feel of your book. Both accept various kinds of inputs, which are explained in further detail below.</p>
-</section>
-<section id="directives">
-<h2>Directives<a class="headerlink" href="#directives" title="Permalink to this heading">#</a></h2>
-<p>With directives, you can adjust the look and feel of your Jupyter Book.</p>
-<p>Directives are written like this:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{mydirectivename}
-My directive content
-</pre></div>
-</div>
-<p>Where <code class="docutils literal notranslate"><span class="pre">{mydirectivename}</span></code>would be the name of the directive. However, this directive does not yet exist. While you can integrate directives, there are many directives already implemented in Jupyter Book.
-For instance, if you want to add a note, you can use:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{note}
-Here is a note
-</pre></div>
-</div>
-<p>Which results in:</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Here is a note</p>
-</div>
-<section id="roles">
-<h3>Roles<a class="headerlink" href="#roles" title="Permalink to this heading">#</a></h3>
-<p>Roles are very similar in usage. However, they are somewhat simpler and are limited to one line.</p>
-<p>For example:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Some content {rolename}`and here is my role&#39;s content!`
-</pre></div>
-</div>
-<p>Where <code class="docutils literal notranslate"><span class="pre">{rolename}</span></code>would be the name of the role.</p>
-<p>For instance, if you want to reference another page of your book, you can use the <code class="docutils literal notranslate"><span class="pre">{doc}</span></code>role:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>{doc}`../intro`
-</pre></div>
-</div>
-<p>results in <span class="xref std std-doc">../intro</span></p>
-</section>
-<section id="what-roles-and-directives-are-available">
-<h3>What Roles and Directives are available?<a class="headerlink" href="#what-roles-and-directives-are-available" title="Permalink to this heading">#</a></h3>
-<p>There is more information on how to use Roles and Directives in <a class="reference internal" href="media.html"><span class="doc std std-doc">Media</span></a>, feel free to check it out!</p>
-<p>For more information on what roles and directives you can use, check out:</p>
-<ul class="simple">
-<li><p>The <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html">Sphinx directives page</a></p></li>
-<li><p>The <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/directives.html">reStructured Text directives page</a></p></li>
-<li><p>For building <a class="reference external" href="https://jupyterbook.org/en/stable/content/content-blocks.html">custom Special content blocks</a></p></li>
-</ul>
-</section>
 </section>
 </section>
 
@@ -803,7 +656,8 @@ Here is a note
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formatting-text">Formatting Text</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formatting-text">Formatting Text</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#headings">Headings</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#italic">Italic</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bold">Bold</a></li>
 </ul>
@@ -811,16 +665,9 @@ Here is a note
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nested-lists">(Nested) Lists</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#horizontal-lines">Horizontal Lines</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#blockquotes">Blockquotes</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#headings">Headings</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#embedded-code">Embedded code</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-latex">Writing latex</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-in-the-notebook">Plotting in the notebook</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#special-content-blocks-directives-and-roles">Special Content Blocks - Directives and Roles</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#directives">Directives</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#roles">Roles</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-roles-and-directives-are-available">What Roles and Directives are available?</a></li>
-</ul>
-</li>
 </ul>
   </nav></div>
 
