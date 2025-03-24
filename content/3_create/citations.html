@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Include Citations and Bibliographies &#8212; Creating Educational Content with Jupyter Books</title>
+    <title>Including Citations and Bibliographies &#8212; Creating Educational Content with Jupyter Books</title>
   
   
   
@@ -191,7 +191,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="intro.html">Creating Engaging Content</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="markdown.html">Formatting With Markdown</a></li>
 <li class="toctree-l2"><a class="reference internal" href="media.html">Including Media</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Include Citations and Bibliographies</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Including Citations and Bibliographies</a></li>
 <li class="toctree-l2"><a class="reference internal" href="interactive.html">Making Books truly interactive</a></li>
 <li class="toctree-l2"><a class="reference internal" href="setup-files.html">Structuring Content Using the Table of Contents</a></li>
 </ul>
@@ -410,7 +410,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Include Citations and Bibliographies</h1>
+    <h1>Including Citations and Bibliographies</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -420,6 +420,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-bibliography">Create a Bibliography</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-a-citation">Add a Citation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#edit-the-config-file">Edit the _config File</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-section">Next Section:</a></li>
 </ul>
             </nav>
@@ -432,10 +435,27 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="include-citations-and-bibliographies">
-<h1>Include Citations and Bibliographies<a class="headerlink" href="#include-citations-and-bibliographies" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="including-citations-and-bibliographies">
+<h1>Including Citations and Bibliographies<a class="headerlink" href="#including-citations-and-bibliographies" title="Permalink to this heading">#</a></h1>
+<p>If you want to include citations into your course website, you first need to create a bibtext file, in which the information of your citations are stored in.</p>
+<section id="create-a-bibliography">
+<h2>Create a Bibliography<a class="headerlink" href="#create-a-bibliography" title="Permalink to this heading">#</a></h2>
+<p>Add a new file to your repository and use the <code class="docutils literal notranslate"><span class="pre">.bib</span></code> suffix to create a bibtex file.
+<img alt="Image of how to name the bibtex file" src="static/bib-file-name" /></p>
+<p>Then, add your references to the file:
+<img alt="Image of the newly created bibtex file with one example reference." src="static/bib-file" /></p>
+</section>
+<section id="add-a-citation">
+<h2>Add a Citation<a class="headerlink" href="#add-a-citation" title="Permalink to this heading">#</a></h2>
+<p>Now, you can include your citations into your text. Here is an example:</p>
+<p><code class="docutils literal notranslate"><span class="pre">{cite}</span></code>munafo2017manifesto``</p>
+<p><a href="#id1"><span class="problematic" id="id2">munafo2017manifesto</span></a></p>
+</section>
+<section id="edit-the-config-file">
+<h2>Edit the _config File<a class="headerlink" href="#edit-the-config-file" title="Permalink to this heading">#</a></h2>
 <p><a class="reference external" href="https://jupyterbook.org/en/stable/tutorials/references.html#tutorials-references">https://jupyterbook.org/en/stable/tutorials/references.html#tutorials-references</a></p>
 <p><a class="reference external" href="https://jupyterbook.org/en/stable/content/citations.html">https://jupyterbook.org/en/stable/content/citations.html</a></p>
+</section>
 <section id="next-section">
 <h2>Next Section:<a class="headerlink" href="#next-section" title="Permalink to this heading">#</a></h2>
 <p>In the next section, you will learn how to integrate feedback questions.</p>
@@ -505,6 +525,9 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-bibliography">Create a Bibliography</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-a-citation">Add a Citation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#edit-the-config-file">Edit the _config File</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-section">Next Section:</a></li>
 </ul>
   </nav></div>
