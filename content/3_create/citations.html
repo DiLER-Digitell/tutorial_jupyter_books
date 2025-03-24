@@ -423,7 +423,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-bibliography">Create a Bibliography</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#edit-the-config-file">Edit the Config File</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-a-citation">Add a Citation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-section">Next Section:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-a-bibliography">Add a Bibliography</a></li>
 </ul>
             </nav>
         </div>
@@ -447,8 +447,8 @@ document.write(`
 </section>
 <section id="edit-the-config-file">
 <h2>Edit the Config File<a class="headerlink" href="#edit-the-config-file" title="Permalink to this heading">#</a></h2>
-<p>There are several inline style options available for your citations (see <a class="reference external" href="https://sphinxcontrib-bibtex.readthedocs.io/en/latest/usage.html#referencing-style">here</a> for more details). We recommend adjusting the reference style in your <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> file as shown below:
-<img alt="Image of the newly created bibtex file with one example reference." src="../../_images/config_bibtex.png" />
+<p>There are several inline style options available for your citations (see <a class="reference external" href="https://sphinxcontrib-bibtex.readthedocs.io/en/latest/usage.html#referencing-style">here</a> for more details). We recommend adjusting the reference style in your <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> file by adding “bibtex_reference_style: author_year” right under “sphinx: config:”. Please ensure the correct indentation.
+<img alt="Image of the config.yml file, in which the reference style is included as described." src="../../_images/config_bibtex.png" />
 This will ensure that author and year are displayed correctly.</p>
 </section>
 <section id="add-a-citation">
@@ -460,9 +460,18 @@ This will ensure that author and year are displayed correctly.</p>
 <p>Result:
 <a href="#id1"><span class="problematic" id="id2">munafo2017manifesto</span></a></p>
 </section>
-<section id="next-section">
-<h2>Next Section:<a class="headerlink" href="#next-section" title="Permalink to this heading">#</a></h2>
-<p>In the next section, you will learn how to integrate feedback questions.</p>
+<section id="add-a-bibliography">
+<h2>Add a Bibliography<a class="headerlink" href="#add-a-bibliography" title="Permalink to this heading">#</a></h2>
+<p>To add a bibliography, you need to use the <code class="docutils literal notranslate"><span class="pre">{bibliography}</span></code> directive:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{bibliography}
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+<span class="c1">## Next Section:</span>
+<span class="n">In</span> <span class="n">the</span> <span class="nb">next</span> <span class="n">section</span><span class="p">,</span> <span class="n">you</span> <span class="n">will</span> <span class="n">learn</span> <span class="n">how</span> <span class="n">to</span> <span class="n">integrate</span> <span class="n">feedback</span> <span class="n">questions</span><span class="o">.</span>
+</pre></div>
+</div>
 </section>
 </section>
 
@@ -532,7 +541,7 @@ This will ensure that author and year are displayed correctly.</p>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-bibliography">Create a Bibliography</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#edit-the-config-file">Edit the Config File</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-a-citation">Add a Citation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-section">Next Section:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-a-bibliography">Add a Bibliography</a></li>
 </ul>
   </nav></div>
 
