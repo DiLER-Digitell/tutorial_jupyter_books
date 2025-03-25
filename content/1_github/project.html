@@ -421,15 +421,8 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-new-repository">Create a New Repository</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-the-course-template">Working With the Course Template</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fork-the-course-template">1. Fork the Course Template</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-familiar-with-the-structure-and-the-existing-files">2. Getting Familiar With the Structure and the Existing Files</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#make-your-first-adjustments">3. Make Your First Adjustments</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-readme">The README</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-license">The LICENSE</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#next-chapter">Next Chapter:</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#forking-the-course-template">Forking the Course Template</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#next-section">Next Section:</a></li>
 </ul>
 </li>
 </ul>
@@ -445,7 +438,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="setting-up-a-repository-on-github">
 <h1>Setting Up a Repository on GitHub<a class="headerlink" href="#setting-up-a-repository-on-github" title="Permalink to this heading">#</a></h1>
-<p>In this section, you’ll first learn how to start a new project on GitHub, followed by a step-by-step guide on how to use the free course template for your own course. By using our course template instead of starting a completely new project, you can take advantage of the existing structure and only need to customize and add individual pages to fit your content.</p>
+<p>In this section, you’ll first learn how to start a new project on GitHub, followed by short guide on how to use the free course template for your own course. By using our course template instead of starting a completely new project, you can take advantage of the existing structure and only need to customize and add individual pages to fit your content.</p>
 <section id="create-a-new-repository">
 <h2>Create a New Repository<a class="headerlink" href="#create-a-new-repository" title="Permalink to this heading">#</a></h2>
 <p>Now, let’s put that new account to use by creating an online repository — often called a “remote repo”!</p>
@@ -467,88 +460,16 @@ document.write(`
 </ol>
 <p>Congratulations! You are now the proud owner of a GitHub repository.</p>
 </section>
-<section id="working-with-the-course-template">
-<h2>Working With the Course Template<a class="headerlink" href="#working-with-the-course-template" title="Permalink to this heading">#</a></h2>
-<p>To work with our materials, you need to “fork” (i.e., copy) the course template repository to your account:</p>
-<section id="fork-the-course-template">
-<h3>1. Fork the Course Template<a class="headerlink" href="#fork-the-course-template" title="Permalink to this heading">#</a></h3>
-<p>Head over to the <a class="reference external" href="https://github.com/DiLER-Digitell/Course-template">course template repo</a>, and on the upper right-hand side, click “Fork”.</p>
+<section id="forking-the-course-template">
+<h2>Forking the Course Template<a class="headerlink" href="#forking-the-course-template" title="Permalink to this heading">#</a></h2>
+<p>To work with our materials, you need to “fork” (i.e., copy) the course template repository to your account. Therefore, head over to the <a class="reference external" href="https://github.com/DiLER-Digitell/Course-template">course template repo</a>, and on the upper right-hand side, click “Fork”.</p>
 <p><img alt="depicting position a look of the fork button on a GitHub repository" src="../../_images/fork_button.png" /></p>
 <p>You’ll be asked to create a new fork; simply add a new repository name, provide a short description, or keep the existing one, check the box “Copy the main branch only,” and click the “Create fork” button.</p>
 <p><img alt="depicting position a look of the fork button on a GitHub repository" src="../../_images/create_fork.png" /></p>
 <p>Now you created your own course repository!</p>
-</section>
-<section id="getting-familiar-with-the-structure-and-the-existing-files">
-<h3>2. Getting Familiar With the Structure and the Existing Files<a class="headerlink" href="#getting-familiar-with-the-structure-and-the-existing-files" title="Permalink to this heading">#</a></h3>
-<p><strong>The course template is structured in the following way</strong></p>
-<p><img alt="depicting the contents of the course template repository on GitHub" src="../../_images/repo.png" /></p>
-<p>Where:</p>
-<ul class="simple">
-<li><p><strong>.github/workflows folder</strong>: Contains the prewritten scripts to automatically create your website every time new content is added.</p></li>
-<li><p><strong>lecture</strong>: Contains all our content files and directories, as well as the “toc.yml” (transcript of records) and the “config.yml” files, which define the structure and functionality of the website.</p></li>
-<li><p><strong>README</strong>: A short explanation of your website/course.</p></li>
-<li><p><strong>LICENSE</strong>: Self-explanatory, stating who and how people are allowed to use or reproduce the content of this repo.</p></li>
-<li><p><strong>requirements.txt</strong>: Contains the necessary requirements for the automatic scripts building the website to run; there is no need to change anything here.</p></li>
-</ul>
-<p>Now, most the things that you’ll be adapting are contained in the content folder “lecture”, which looks like this:</p>
-<p><img alt="depicting the contents of the course template repository on GitHub" src="../../_images/lecture_folder.png" /></p>
-<p>Where:</p>
-<ul class="simple">
-<li><p><strong>content</strong>: Contains files making up the main content of a course website.</p></li>
-<li><p><strong>general information</strong>: Contains files providing information, such as the necessary setup, the outline of the course, a code of conduct, etc. The included “<a class="reference external" href="http://index.md">index.md</a>” file will be the landing point of the course website.</p></li>
-<li><p><strong>introduction</strong>: Contains files making up the introductory sessions of a course.</p></li>
-<li><p><strong>static</strong>: Contains all the pictures and graphs contained in a course.</p></li>
-<li><p><strong>config.yml</strong>: Contains the course title, authors, and copyright notice at the footer of the website, which you should change before hosting your website. Further, it contains the specifics for the technical implementations of a course, e.g., whether Jupyter notebooks should be re-run every time the course website is created by the GitHub workflow or, e.g., whether a course incorporated interactive elements.</p></li>
-<li><p><strong>toc.yml</strong>: Contains information on the structure of the course website. For an in-depth explanation, jump to the <span class="xref myst">respective section</span>.</p></li>
-</ul>
-<br>
-</section>
-<section id="make-your-first-adjustments">
-<h3>3. Make Your First Adjustments<a class="headerlink" href="#make-your-first-adjustments" title="Permalink to this heading">#</a></h3>
-<p>To get started, let’s take a look into the “_config.yml” file and exchange the information with your course title, author’s names and affiliation, and so on.</p>
-<p>To edit a file, click on the specific file (e.g., _config.yml).</p>
-<p><img alt="Image of the file structure." src="../../_images/click_on_file.png" /></p>
-<p>Then, click the edit button, represented by a small pencil in the upper right corner.</p>
-<p><img alt="Image of the edit button on the upper right corner." src="../../_images/edit_file.png" /></p>
-<p>Once you’re done editing, click on “Commit changes…”.</p>
-<p><img alt="Image of the commit changes button." src="../../_images/commit_changes.png" /></p>
-<p>For transparency and version control, provide a brief message describing the changes you made.</p>
-<p><img alt="Image of the pop-up window in which one can write the commit message" src="../../_images/commit_message.png" /></p>
-<p>As soon as you click on “Commit changes”, your changes will be saved.</p>
-<p>It is further essential that you adapt the README and LICENSE files to your needs:</p>
-<section id="the-readme">
-<h4>The README<a class="headerlink" href="#the-readme" title="Permalink to this heading">#</a></h4>
-<p>To actually display the purpose and, e.g., acknowledgments of your course, you’ll have to adapt the “<a class="reference external" href="http://README.md">README.md</a>” file on your public repo. In the template, this looks like this:</p>
-<p><img alt="depicting the README" src="../../_images/readme.png" /></p>
-<p>and translates to this view at the bottom of your public remote repo:</p>
-<p><img alt="depicting the rendered README" src="../../_images/readme_rendered.png" /></p>
-<p>So simply add the name and explanation of your course, your credentials, and, e.g., how others may get in contact with you to the <a class="reference external" href="http://README.md">README.md</a>. Please keep the credit included to our original G0RELLA template lectures.</p>
-</section>
-<section id="the-license">
-<h4>The LICENSE<a class="headerlink" href="#the-license" title="Permalink to this heading">#</a></h4>
-<p>You may further change the contained LICENSE file to your liking as long as you respect the stated stipulations.</p>
-<p><img alt="depicting the LICENSE of the course template" src="../../_images/license.png" /></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Redistribution</span> <span class="ow">and</span> <span class="n">use</span> <span class="ow">in</span> <span class="n">source</span> <span class="ow">and</span> <span class="n">binary</span> <span class="n">forms</span><span class="p">,</span> <span class="k">with</span> <span class="ow">or</span> <span class="n">without</span>
-<span class="n">modification</span><span class="p">,</span> <span class="n">are</span> <span class="n">permitted</span> <span class="n">provided</span> <span class="n">that</span> <span class="n">the</span> <span class="n">following</span> <span class="n">conditions</span> <span class="n">are</span> <span class="n">met</span><span class="p">:</span>
-
-<span class="o">*</span> <span class="n">Redistributions</span> <span class="n">of</span> <span class="n">source</span> <span class="n">code</span> <span class="n">must</span> <span class="n">retain</span> <span class="n">the</span> <span class="n">above</span> <span class="n">copyright</span> <span class="n">notice</span><span class="p">,</span> <span class="n">this</span>
-  <span class="nb">list</span> <span class="n">of</span> <span class="n">conditions</span> <span class="ow">and</span> <span class="n">the</span> <span class="n">following</span> <span class="n">disclaimer</span><span class="o">.</span>
-
-<span class="o">*</span> <span class="n">Redistributions</span> <span class="ow">in</span> <span class="n">binary</span> <span class="n">form</span> <span class="n">must</span> <span class="n">reproduce</span> <span class="n">the</span> <span class="n">above</span> <span class="n">copyright</span> <span class="n">notice</span><span class="p">,</span>
-  <span class="n">this</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">conditions</span> <span class="ow">and</span> <span class="n">the</span> <span class="n">following</span> <span class="n">disclaimer</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">documentation</span>
-  <span class="ow">and</span><span class="o">/</span><span class="ow">or</span> <span class="n">other</span> <span class="n">materials</span> <span class="n">provided</span> <span class="k">with</span> <span class="n">the</span> <span class="n">distribution</span><span class="o">.</span>
-
-<span class="o">*</span> <span class="n">Neither</span> <span class="n">the</span> <span class="n">name</span> <span class="n">of</span> <span class="n">the</span> <span class="n">copyright</span> <span class="n">holder</span> <span class="n">nor</span> <span class="n">the</span> <span class="n">names</span> <span class="n">of</span> <span class="n">its</span>
-  <span class="n">contributors</span> <span class="n">may</span> <span class="n">be</span> <span class="n">used</span> <span class="n">to</span> <span class="n">endorse</span> <span class="ow">or</span> <span class="n">promote</span> <span class="n">products</span> <span class="n">derived</span> <span class="kn">from</span>
-<span class="w">  </span><span class="nn">this</span> <span class="n">software</span> <span class="n">without</span> <span class="n">specific</span> <span class="n">prior</span> <span class="n">written</span> <span class="n">permission</span><span class="o">.</span>
-</pre></div>
-</div>
-<p>Before going into detail on how to add and modify this template to your needs, you will learn how to host your course website.</p>
-</section>
-<section id="next-chapter">
-<h4>Next Chapter:<a class="headerlink" href="#next-chapter" title="Permalink to this heading">#</a></h4>
-<p>In the next chapter, you will discover how to publish and maintain your own course website.</p>
-</section>
+<section id="next-section">
+<h3>Next Section:<a class="headerlink" href="#next-section" title="Permalink to this heading">#</a></h3>
+<p>In the next section, you will explore the course template’s structure and learn how to make your first customizations.</p>
 </section>
 </section>
 </section>
@@ -617,15 +538,8 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-new-repository">Create a New Repository</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-the-course-template">Working With the Course Template</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fork-the-course-template">1. Fork the Course Template</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-familiar-with-the-structure-and-the-existing-files">2. Getting Familiar With the Structure and the Existing Files</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#make-your-first-adjustments">3. Make Your First Adjustments</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-readme">The README</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-license">The LICENSE</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#next-chapter">Next Chapter:</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#forking-the-course-template">Forking the Course Template</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#next-section">Next Section:</a></li>
 </ul>
 </li>
 </ul>
