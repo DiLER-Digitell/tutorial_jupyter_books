@@ -422,13 +422,8 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#goals">Goals</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-s-a-github-and-why-should-we-use-it">What’s a ‘GitHub,’ and Why Should We Use It?</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#version-control-and-collaborative-work">Version Control and Collaborative Work</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#next-section">Next Section:</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-s-github-and-why-should-we-use-it">What’s GitHub and Why Should We Use It?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-section">Next Section:</a></li>
 </ul>
             </nav>
         </div>
@@ -442,7 +437,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="getting-started-with-github">
 <h1>Getting Started With GitHub<a class="headerlink" href="#getting-started-with-github" title="Permalink to this heading">#</a></h1>
-<p>To publish your course/website, we will be relying on GitHub, a web-based platform that provides hosting and storage services for software and data.</p>
+<p>To create and publish your course website, we will be relying on GitHub, a web-based platform that provides hosting and storage services for software and data.</p>
 <section id="goals">
 <h2>Goals<a class="headerlink" href="#goals" title="Permalink to this heading">#</a></h2>
 <p>This chapter aims to include the following goals. Do check back here later and see if the lesson has appropriately addressed the stated goals!</p>
@@ -454,26 +449,22 @@ document.write(`
 <li><p>Learn how to edit existing files</p></li>
 </ol>
 </section>
-<section id="what-s-a-github-and-why-should-we-use-it">
-<h2>What’s a ‘GitHub,’ and Why Should We Use It?<a class="headerlink" href="#what-s-a-github-and-why-should-we-use-it" title="Permalink to this heading">#</a></h2>
+<section id="what-s-github-and-why-should-we-use-it">
+<h2>What’s GitHub and Why Should We Use It?<a class="headerlink" href="#what-s-github-and-why-should-we-use-it" title="Permalink to this heading">#</a></h2>
 <p>As already mentioned, GitHub is a web-based platform for storing, organizing, and managing projects.</p>
-<p>Content is mainly organized in repositories (or “repos” for short); these repos can be viewed as being equivalent to a normal directory that you have on your local machine, for, e.g., storing data and pictures. They may contain a variety of file types and nested directories and will be used as a place to store and organize your project files, including code, assets, and documentation.</p>
-<p>Here is the repository for the course template you’ll be working with. Do not worry if that’s still confusing to you; learning how to work with GitHub is best done using a “learning-by-doing” approach.</p>
+<p>Content is mainly organized in repositories (or “repos”); these repos can be viewed as being equivalent to a normal directory that you have on your local machine, for, e.g., storing data and pictures. They may contain a variety of file types and nested directories and will be used as a place to store and organize your project files, including code, assets, and documentation.</p>
+<p>Here is an example of the repository for the course template you’ll be working with:</p>
 <p><img alt="png depicting the file structure of the course template repository" src="../../_images/template_structure.png" /></p>
-<p>GitHub, or the underlying version control system “Git”, is basically used in every large software project that you can think of. A GitHub server may be set up on a local machine or network if the access to the hosted software or data should be restricted, but we’ll be using the public GitHub server, i.e., the <a class="reference external" href="https://github.com">web-based version of GitHub</a>. In essence, this allows us to openly share and for other people to make copies or download our projects, e.g., for collaborative development or issue tracking. It further allows for feedback on our courses or the reporting of possible errors people may have encountered.</p>
-<p>This project is built on the idea that the knowledge that we’re trying to share and that the courses built on this framework should be as accessible as possible; therefore, we opted to host this <a class="reference external" href="https://github.com/DiLER-Digitell/tutorial_jupyter_books">course</a>, as well as our <a class="reference external" href="https://github.com/DiLER-Digitell/Course-template">course template</a> via GitHub. This allows you and others to simply download the contained materials and adapt them to make your own projects. Further, GitHub allows us to host websites like this one via the “GitHub pages” service free of any charge.</p>
-<section id="version-control-and-collaborative-work">
-<h3>Version Control and Collaborative Work<a class="headerlink" href="#version-control-and-collaborative-work" title="Permalink to this heading">#</a></h3>
-<p>I’m sure we’ve all lost important documents, codes, or progress while working in academia. If you’ve been doing programming work, you might also have encountered that fixing a bug may lead to other substantial bugs down the line.
-So people generally tend to come up with their own solution for “project management,” e.g., by maintaining multiple files, e.g., project_working_copy_1.txt, project_notes.txt,  project_final_draft_3.txt or at times by making a mess of our documents by storing cut or to be implemented content in its own sub-section at the end of project_draft_4.txt.</p>
-<p>GitHub alleviates that problem by making use of Git, a distributed version control system that records every change made to a file (see our <span class="xref myst">additional chapter on Git</span> for more details). Via the commit system, we can not only maintain different versions of the same file on, e.g., your local system and the connected public repository, but also revert changes that had negative consequences or recover information lost on your system.</p>
-<p>Git further makes it easy to work with multiple users on the same project, as each user can maintain their local versions and submit their changes to the public directory, which can then be reviewed by the team on quality and compatibility and subsequently be incorporated into the online project.</p>
-<br>
+<p>GitHub is based on “Git”, a version control system used in nearly every large software project. A GitHub server may be set up on a local machine or network if the access to the hosted software or data should be restricted, but we’ll be using the public GitHub server, i.e., the <a class="reference external" href="https://github.com">web-based version of GitHub</a>. In essence, this allows us to openly share and for other people to make copies or download our projects, e.g., for collaborative development or issue tracking. It further allows for feedback on our courses or the reporting of possible errors people may have encountered.</p>
+<p>GitHub helps prevent the common problem of losing important work or creating disorganized files. Instead of manually managing multiple versions (e.g., project_working_copy_1.txt), Git tracks every change made to a file.</p>
+<ul class="simple">
+<li><p><strong>Version Control</strong>: Git records all changes, allowing you to revert to previous versions if needed.</p></li>
+<li><p><strong>Collaboration</strong>: Multiple users can work on the same project, submit changes, and review them before integrating them into the main project.</p></li>
+</ul>
+</section>
 <section id="next-section">
-<h4>Next Section:<a class="headerlink" href="#next-section" title="Permalink to this heading">#</a></h4>
+<h2>Next Section:<a class="headerlink" href="#next-section" title="Permalink to this heading">#</a></h2>
 <p>In the next section you will learn how to create your own GitHub account.</p>
-</section>
-</section>
 </section>
 <div class="toctree-wrapper compound">
 </div>
@@ -543,13 +534,8 @@ So people generally tend to come up with their own solution for “project manag
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#goals">Goals</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-s-a-github-and-why-should-we-use-it">What’s a ‘GitHub,’ and Why Should We Use It?</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#version-control-and-collaborative-work">Version Control and Collaborative Work</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#next-section">Next Section:</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-s-github-and-why-should-we-use-it">What’s GitHub and Why Should We Use It?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-section">Next Section:</a></li>
 </ul>
   </nav></div>
 
