@@ -447,24 +447,60 @@ document.write(`
 <p><strong>The course template is structured in the following way</strong></p>
 <p><img alt="depicting the contents of the course template repository on GitHub" src="../../_images/repo.png" /></p>
 <p>Where:</p>
-<ul class="simple">
-<li><p><strong>.github/workflows folder</strong>: Contains the prewritten scripts to automatically create your website every time new content is added.</p></li>
-<li><p><strong>lecture</strong>: Contains all our content files and directories, as well as the “toc.yml” (transcript of records) and the “config.yml” files, which define the structure and functionality of the website.</p></li>
-<li><p><strong>README</strong>: A short explanation of your website/course.</p></li>
-<li><p><strong>LICENSE</strong>: Self-explanatory, stating who and how people are allowed to use or reproduce the content of this repo.</p></li>
-<li><p><strong>requirements.txt</strong>: Contains the necessary requirements for the automatic scripts building the website to run; there is no need to change anything here.</p></li>
-</ul>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>.github/workflows folder</strong></p></td>
+<td><p>Contains the prewritten scripts to automatically create your website every time new content is added.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>lecture</strong></p></td>
+<td><p>Contains all our content files and directories, as well as the “toc.yml” (transcript of records) and the “config.yml” files, which define the structure and functionality of the website.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>README</strong></p></td>
+<td><p>A short explanation of your website/course.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>LICENSE</strong></p></td>
+<td><p>Self-explanatory, stating who and how people are allowed to use or reproduce the content of this repo.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>requirements.txt</strong></p></td>
+<td><p>Contains the necessary requirements for the automatic scripts building the website to run; there is no need to change anything here.</p></td>
+</tr>
+</tbody>
+</table>
 <p>Now, most the things that you’ll be adapting are contained in the content folder “lecture”, which looks like this:</p>
 <p><img alt="depicting the contents of the course template repository on GitHub" src="../../_images/lecture_folder.png" /></p>
 <p>Where:</p>
-<ul class="simple">
-<li><p><strong>content</strong>: Contains files making up the main content of a course website.</p></li>
-<li><p><strong>general information</strong>: Contains files providing information, such as the necessary setup, the outline of the course, a code of conduct, etc. The included “<a class="reference external" href="http://index.md">index.md</a>” file will be the landing point of the course website.</p></li>
-<li><p><strong>introduction</strong>: Contains files making up the introductory sessions of a course.</p></li>
-<li><p><strong>static</strong>: Contains all the pictures and graphs contained in a course.</p></li>
-<li><p><strong>config.yml</strong>: Contains the course title, authors, and copyright notice at the footer of the website, which you should change before hosting your website. Further, it contains the specifics for the technical implementations of a course, e.g., whether Jupyter notebooks should be re-run every time the course website is created by the GitHub workflow or, e.g., whether a course incorporated interactive elements.</p></li>
-<li><p><strong>toc.yml</strong>: Contains information on the structure of the course website. For an in-depth explanation, jump to the <span class="xref myst">respective section</span>.</p></li>
-</ul>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>content</strong></p></td>
+<td><p>Contains files making up the main content of a course website.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>general information</strong></p></td>
+<td><p>Contains files providing information, such as the necessary setup, the outline of the course, a code of conduct, etc. The included “<a class="reference external" href="http://index.md">index.md</a>” file will be the landing point of the course website.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>introduction</strong></p></td>
+<td><p>Contains files making up the introductory sessions of a course.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>static</strong></p></td>
+<td><p>Contains all the pictures and graphs contained in a course.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>config.yml</strong></p></td>
+<td><p>Contains the course title, authors, and copyright notice at the footer of the website, which you should change before hosting your website. Further, it contains the specifics for the technical implementations of a course, e.g., whether Jupyter notebooks should be re-run every time the course website is created by the GitHub workflow or, e.g., whether a course incorporated interactive elements.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>toc.yml</strong></p></td>
+<td><p>Contains information on the structure of the course website. For an in-depth explanation, jump to the <a class="reference internal" href="../3_create/setup-files.html"><span class="doc std std-doc">respective section</span></a>.</p></td>
+</tr>
+</tbody>
+</table>
 <br>
 </section>
 <section id="make-your-first-adjustments">
