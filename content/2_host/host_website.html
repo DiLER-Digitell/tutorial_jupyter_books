@@ -442,8 +442,8 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="hosting-your-course-website">
 <h1>Hosting Your Course Website<a class="headerlink" href="#hosting-your-course-website" title="Permalink to this heading">#</a></h1>
-<p>Now that you have created your own repo or forked the template, you will learn how to actually turn your course files into a website. To do this, we’ll be using <strong>Github Pages</strong>. GitHub Pages allows users to host websites directly from their GitHub repos, creating a website for their personal portfolio, project documentation, or, in this case, course content.
-The website is generated directly from the contents of your GitHub repo and is automatically updated whenever changes are made to the repository.</p>
+<p>Now that you have created your own course repo based on the course template, you will learn how to actually turn your course files into a website. To do this, we’ll be using <strong>Github Pages</strong>. GitHub Pages allows users to host websites directly from their GitHub repos, creating a website for their personal portfolio, project documentation, or, in this case, course content.</p>
+<p>The website is generated directly from the contents of your GitHub repo and is automatically updated whenever changes are made to the repository.</p>
 <section id="goals">
 <h2>Goals<a class="headerlink" href="#goals" title="Permalink to this heading">#</a></h2>
 <p>This chapter aims to include the following goals:</p>
@@ -455,35 +455,44 @@ The website is generated directly from the contents of your GitHub repo and is a
 <section id="setting-up-github-pages">
 <h2>Setting up GitHub Pages<a class="headerlink" href="#setting-up-github-pages" title="Permalink to this heading">#</a></h2>
 <p>Normally, you’d have to set up a <a class="reference external" href="https://github.com/marketplace/actions/github-pages-action">“GitHub-pages-actions”</a> script for the website to be automatically built on push, but the course template already contains everything you need.</p>
-<p>If we take a closer look at the <code class="docutils literal notranslate"><span class="pre">.github/workflows</span></code> folder, we’ll find a file called <code class="docutils literal notranslate"><span class="pre">book.yml</span></code>. This file already contains all the instructions necessary for GitHub to build your book automatically. All we need to do now is change a few of the settings of our online repo.</p>
+<p>Please take a closer look at the <code class="docutils literal notranslate"><span class="pre">.github/workflows</span></code> folder, where you’ll find a file called <code class="docutils literal notranslate"><span class="pre">book.yml</span></code>. This file already contains all the instructions necessary for GitHub to build your book automatically. All you need to do now is change a few of the settings of your online repo.</p>
 <section id="setting-up-your-website">
 <h3>Setting Up Your Website<a class="headerlink" href="#setting-up-your-website" title="Permalink to this heading">#</a></h3>
-<p><strong>1. Open your repository in your browser and click on “Settings” in the top tab, located on the far right.</strong></p>
+<ol class="arabic simple">
+<li><p>Open your repository in your browser and click on “Settings” in the top tab, located on the far right.</p></li>
+</ol>
 <p><img alt="Image of the tab where the word &quot;Settings&quot; is located on the far right" src="../../_images/settings.png" /></p>
-<p><strong>2. Click on “Pages” under “Code and automation” on the left side.</strong></p>
+<ol class="arabic simple" start="2">
+<li><p>Click on “Pages” under “Code and automation” on the left side.</p></li>
+</ol>
 <p><img alt="Image of the menu on the left side." src="../../_images/pages.png" /></p>
-<p><strong>3. Under Source, select “Deploy from a branch”</strong></p>
+<ol class="arabic simple" start="3">
+<li><p>Under Source, select “Deploy from a branch”.</p></li>
+</ol>
 <p><img alt="Image of the &quot;Deploy from a branch&quot; option under Source section, located under the Build and Deployment section" src="../../_images/deploy.png" /></p>
-<p><strong>4. Under Branch: Select branch “master” and select the “/root” folder and save</strong></p>
+<ol class="arabic simple" start="4">
+<li><p>Under Branch: Select branch “master” and select the “/root” folder and save.</p></li>
+</ol>
 <p><img alt="Image of the settings under Branch." src="../../_images/branch.png" /></p>
-<p><strong>5. Push a new commit to your repo, i.e. make a change to one file (e.g., add a line to your <a class="reference external" href="http://README.md">README.md</a>)</strong></p>
+<ol class="arabic simple" start="5">
+<li><p>Push a new commit to your repo, i.e. make a change to one file (e.g., add a line to your <code class="docutils literal notranslate"><span class="pre">README.md</span></code>).</p></li>
+</ol>
 </section>
 <section id="checking-your-workflow">
 <h3>Checking Your Workflow<a class="headerlink" href="#checking-your-workflow" title="Permalink to this heading">#</a></h3>
-<p>Next, if you click on “Actions” at the top of your repository, you should see that a workflow called “pages and deployment” is running. In this image, the process has been completed, as indicated by the green checkmark:</p>
+<p>Next, click on “Actions” at the top of your repository. You should see a workflow named “pages and deployment” running. By clicking on this workflow, you’ll be able to view a summary of the process. In the image below, the process is complete, as shown by the green checkmark:</p>
 <p><img alt="Image of a completed workflow with a green checkmark." src="../../_images/action_deployment.png" /></p>
 </section>
 <section id="getting-your-link">
 <h3>Getting Your Link<a class="headerlink" href="#getting-your-link" title="Permalink to this heading">#</a></h3>
 <p>Once that process has been completed head back over to “Settings” -&gt; “Pages”. At the top, under “GitHub Pages”, you should now find a field that looks like this:</p>
 <p><img alt="Image of the final link that is presented under &quot;GitHub Pages&quot;." src="../../_images/pages_link.png" /></p>
-<p>Clicking on the displayed link should lead you to your newly built content site. Now, you can simply copy that link and add it to your repos <a class="reference external" href="http://README.md">README.md</a>, so people can actually find your website.
-Done!</p>
+<p>Click on the link to view your freshly built content website! Now, simply copy that link and paste it into your repo’s <code class="docutils literal notranslate"><span class="pre">README.md</span></code>, so others can easily access your website. And… you’re all set!</p>
 </section>
 </section>
 <section id="next-section">
 <h2>Next Section:<a class="headerlink" href="#next-section" title="Permalink to this heading">#</a></h2>
-<p>In the next section, you will how to identify failed workflows and how to troubleshoot common errors.</p>
+<p>In the next section, you will learn how to identify failed workflows and how to troubleshoot common errors.</p>
 </section>
 <div class="toctree-wrapper compound">
 </div>
