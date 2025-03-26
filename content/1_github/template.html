@@ -441,10 +441,10 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="exploring-and-customizing-the-template-repository">
 <h1>Exploring and Customizing the Template Repository<a class="headerlink" href="#exploring-and-customizing-the-template-repository" title="Permalink to this heading">#</a></h1>
-<p>Now that you’ve forked the course template, let’s go through how it’s structured, identify which files you need to customize, and make your first changes.</p>
+<p>Now that you’ve forked the course template and created your own course repo, let’s explore its structure, identify the key files for customization, and make your first changes.</p>
 <section id="getting-familiar-with-the-structure-and-the-existing-files">
 <h2>Getting Familiar With the Structure and the Existing Files<a class="headerlink" href="#getting-familiar-with-the-structure-and-the-existing-files" title="Permalink to this heading">#</a></h2>
-<p><strong>The course template is structured in the following way</strong></p>
+<p>The course template is structured as follows:</p>
 <p><img alt="depicting the contents of the course template repository on GitHub" src="../../_images/repo.png" /></p>
 <p>Where:</p>
 <table class="table">
@@ -458,9 +458,9 @@ document.write(`
 <td class="text-left"><p>Contains the prewritten scripts to automatically create your website every time new content is added.</p></td>
 </tr>
 <tr class="row-odd"><td class="text-left"><p><strong>lecture</strong></p></td>
-<td class="text-left"><p>Contains all our content files and directories, as well as the “toc.yml” (transcript of records) and the “config.yml” files, which define the structure and functionality of the website.</p></td>
+<td class="text-left"><p>Contains all our content files and directories, as well as the <code class="docutils literal notranslate"><span class="pre">toc.yml</span></code> (table of content) and the <code class="docutils literal notranslate"><span class="pre">config.yml</span></code> files, which define the structure and functionality of the website.</p></td>
 </tr>
-<tr class="row-even"><td class="text-left"><p><strong><a class="reference external" href="http://README.md">README.md</a></strong></p></td>
+<tr class="row-even"><td class="text-left"><p><strong>README</strong></p></td>
 <td class="text-left"><p>A short explanation of your website/course.</p></td>
 </tr>
 <tr class="row-odd"><td class="text-left"><p><strong>LICENSE</strong></p></td>
@@ -485,7 +485,7 @@ document.write(`
 <td class="text-left"><p>Contains files making up the main content of a course website.</p></td>
 </tr>
 <tr class="row-odd"><td class="text-left"><p><strong>general information</strong></p></td>
-<td class="text-left"><p>Contains files providing information, such as the necessary setup, the outline of the course, a code of conduct, etc. The included “<a class="reference external" href="http://index.md">index.md</a>” file will be the landing point of the course website.</p></td>
+<td class="text-left"><p>Contains files providing information, such as the necessary setup, the outline of the course, a code of conduct, etc. The included <code class="docutils literal notranslate"><span class="pre">index.md</span></code> file will be the landing point of the course website.</p></td>
 </tr>
 <tr class="row-even"><td class="text-left"><p><strong>introduction</strong></p></td>
 <td class="text-left"><p>Contains files making up the introductory sessions of a course.</p></td>
@@ -505,28 +505,36 @@ document.write(`
 </section>
 <section id="make-your-first-adjustments">
 <h2>Make Your First Adjustments<a class="headerlink" href="#make-your-first-adjustments" title="Permalink to this heading">#</a></h2>
-<p>To get started, let’s take a look into the “_config.yml” file and exchange the information with your course title, author’s names and affiliation, and so on.</p>
-<p>To edit a file, click on the specific file (e.g., _config.yml).</p>
+<p>Let’s kick things off by diving into the <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> file! Here, you’ll update the course title, authors’ names, affiliations, and other key details to make the template your own.</p>
+<ol class="arabic simple">
+<li><p>To edit a file, click on the specific file (here: <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code>).</p></li>
+</ol>
 <p><img alt="Image of the file structure." src="../../_images/click_on_file.png" /></p>
-<p>Then, click the edit button, represented by a small pencil in the upper right corner.</p>
+<ol class="arabic simple" start="2">
+<li><p>Click the edit button, represented by a small pencil in the upper right corner.</p></li>
+</ol>
 <p><img alt="Image of the edit button on the upper right corner." src="../../_images/edit_file.png" /></p>
-<p>Once you’re done editing, click on “Commit changes…”.</p>
+<ol class="arabic simple" start="3">
+<li><p>Replace the existing information with your course title, your name, affiliation, and any other relevant details. Once you’re finished, click “Commit changes…”.</p></li>
+</ol>
 <p><img alt="Image of the commit changes button." src="../../_images/commit_changes.png" /></p>
-<p>For transparency and version control, provide a brief message describing the changes you made.</p>
+<ol class="arabic simple" start="4">
+<li><p>For transparency and version control, provide a brief message describing the changes you made.</p></li>
+</ol>
 <p><img alt="Image of the pop-up window in which one can write the commit message" src="../../_images/commit_message.png" /></p>
 <p>As soon as you click on “Commit changes”, your changes will be saved.</p>
 <p>It is further essential that you adapt the README and LICENSE files to your needs:</p>
 <section id="the-readme">
 <h3>The README<a class="headerlink" href="#the-readme" title="Permalink to this heading">#</a></h3>
-<p>To actually display the purpose and, e.g., acknowledgments of your course, you’ll have to adapt the “<a class="reference external" href="http://README.md">README.md</a>” file on your public repo. In the template, this looks like this:</p>
+<p>To actually display the purpose and, e.g., acknowledgments of your course, you’ll have to adapt the <code class="docutils literal notranslate"><span class="pre">README.md</span></code> file on your public repo. In the template, this looks like this:</p>
 <p><img alt="depicting the README" src="../../_images/readme.png" /></p>
 <p>and translates to this view at the bottom of your public remote repo:</p>
 <p><img alt="depicting the rendered README" src="../../_images/readme_rendered.png" /></p>
-<p>So simply add the name and explanation of your course, your credentials, and, e.g., how others may get in contact with you to the <a class="reference external" href="http://README.md">README.md</a>. Please keep the credit included to our original G0RELLA template lectures.</p>
+<p>Let’s get started! Click on the <code class="docutils literal notranslate"><span class="pre">README.md</span></code>, then hit the edit button in the upper right corner. Add details about your course, including its title, a brief description, your credentials, and how others can reach out to you. Please keep the credit included to our original G0RELLA template lectures.</p>
 </section>
 <section id="the-license">
 <h3>The LICENSE<a class="headerlink" href="#the-license" title="Permalink to this heading">#</a></h3>
-<p>You may further change the contained LICENSE file to your liking as long as you respect the stated stipulations.</p>
+<p>The course template is licensed under the BSD 3-Clause License. Feel free to modify the LICENSE file as needed, provided you comply with the terms outlined in the license.</p>
 <p><img alt="depicting the LICENSE of the course template" src="../../_images/license.png" /></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Redistribution</span> <span class="ow">and</span> <span class="n">use</span> <span class="ow">in</span> <span class="n">source</span> <span class="ow">and</span> <span class="n">binary</span> <span class="n">forms</span><span class="p">,</span> <span class="k">with</span> <span class="ow">or</span> <span class="n">without</span>
 <span class="n">modification</span><span class="p">,</span> <span class="n">are</span> <span class="n">permitted</span> <span class="n">provided</span> <span class="n">that</span> <span class="n">the</span> <span class="n">following</span> <span class="n">conditions</span> <span class="n">are</span> <span class="n">met</span><span class="p">:</span>
@@ -543,7 +551,7 @@ document.write(`
 <span class="w">  </span><span class="nn">this</span> <span class="n">software</span> <span class="n">without</span> <span class="n">specific</span> <span class="n">prior</span> <span class="n">written</span> <span class="n">permission</span><span class="o">.</span>
 </pre></div>
 </div>
-<p>Before going into detail on how to add and modify this template to your needs, you will learn how to host your course website.</p>
+<p>Before going into detail on how to add files and modify this template to your needs, you will learn how to host your course website.</p>
 </section>
 </section>
 <section id="next-chapter">
