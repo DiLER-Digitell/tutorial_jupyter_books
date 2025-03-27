@@ -201,14 +201,14 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Additional Material</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../4_additional/quick_tutorial.html">Quick Setup Guide for Deploying Courses using Jupyter Book on Github</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_additional/quick_tutorial.html">Quick Setup Guide</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../resources/info.html">Resources</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../resources/CoC.html">Code of Conduct</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../resources/dei.html">Diversity, Equity, and Inclusion</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../resources/open_science.html">Open Science</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../resources/demo.html">Further courses under the DiLER project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../resources/demo.html">Course Examples</a></li>
 </ul>
 
     </div>
@@ -422,7 +422,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-bibliography">Create a Bibliography</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#edit-the-config-file">Edit the Config File</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#check-the-config-file">Check the Config File</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-a-citation">Add a Citation</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-a-bibliography">Add a Bibliography</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-section">Next Section:</a></li>
@@ -439,7 +439,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="adding-citations-and-bibliographies">
 <h1>Adding Citations and Bibliographies<a class="headerlink" href="#adding-citations-and-bibliographies" title="Permalink to this heading">#</a></h1>
-<p>To include citations in your course website, begin by creating a BibTeX file to store your references. Then, link it in the <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> file to ensure it’s recognized. Once set up, you can easily add citations and generate a bibliography to enhance your course content.</p>
+<p>To include citations in your course website, begin by creating a BibTeX file to store your references. Then, check the <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> file to ensure that the file is linked correctly. Once set up, you can easily add citations and generate a bibliography to enhance your course content.</p>
 <section id="create-a-bibliography">
 <h2>Create a Bibliography<a class="headerlink" href="#create-a-bibliography" title="Permalink to this heading">#</a></h2>
 <p>Create a new file in your repository and save it with the <code class="docutils literal notranslate"><span class="pre">.bib</span></code> extension to create a BibTeX file.</p>
@@ -447,19 +447,18 @@ document.write(`
 <p>Then, add your references to the file and click on “Commit changes”.</p>
 <p><img alt="Image of the newly created bibtex file with one example reference." src="../../_images/bib-file.png" /></p>
 </section>
-<section id="edit-the-config-file">
-<h2>Edit the Config File<a class="headerlink" href="#edit-the-config-file" title="Permalink to this heading">#</a></h2>
-<p>Open the <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> file and specify your BibTeX file as the source for citations by adding the following lines under the “sphinx: config:”</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bibtex_bibfiles</span><span class="p">:</span>
-  <span class="o">-</span> <span class="n">references</span><span class="o">.</span><span class="n">bib</span>
-</pre></div>
-</div>
-<p>Please ensure the correct indentation.</p>
+<section id="check-the-config-file">
+<h2>Check the Config File<a class="headerlink" href="#check-the-config-file" title="Permalink to this heading">#</a></h2>
+<p>Open the <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> file and ensure that the linked BibTeX file is correct. By default, its name is “references.bib”.</p>
 <p><img alt="Image of the config.yml file, in which the BibTeX file is included as described." src="../../_images/config_bibtex.png" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If the file is located in a different folder, make sure to include the correct path.</p>
+</div>
 </section>
 <section id="add-a-citation">
 <h2>Add a Citation<a class="headerlink" href="#add-a-citation" title="Permalink to this heading">#</a></h2>
-<p>Now, you can include your citations into your text. Here is an example:</p>
+<p>Now, you can include your citations into your text with help of the <code class="docutils literal notranslate"><span class="pre">{cite}</span></code> role. Here is an example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>{cite}`munafo2017manifesto`
 </pre></div>
 </div>
@@ -554,7 +553,7 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-bibliography">Create a Bibliography</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#edit-the-config-file">Edit the Config File</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#check-the-config-file">Check the Config File</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-a-citation">Add a Citation</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-a-bibliography">Add a Bibliography</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-section">Next Section:</a></li>

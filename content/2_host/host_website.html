@@ -201,14 +201,14 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Additional Material</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../4_additional/quick_tutorial.html">Quick Setup Guide for Deploying Courses using Jupyter Book on Github</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_additional/quick_tutorial.html">Quick Setup Guide</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../resources/info.html">Resources</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../resources/CoC.html">Code of Conduct</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../resources/dei.html">Diversity, Equity, and Inclusion</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../resources/open_science.html">Open Science</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../resources/demo.html">Further courses under the DiLER project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../resources/demo.html">Course Examples</a></li>
 </ul>
 
     </div>
@@ -471,16 +471,24 @@ document.write(`
 </ol>
 <p><img alt="Image of the &quot;Deploy from a branch&quot; option under Source section, located under the Build and Deployment section" src="../../_images/deploy.png" /></p>
 <ol class="arabic simple" start="4">
-<li><p>Under Branch: Select branch “master” and select the “/root” folder and save.</p></li>
+<li><p>Under Branch: Select branch “main” and select the “/root” folder and save.</p></li>
 </ol>
 <p><img alt="Image of the settings under Branch." src="../../_images/branch.png" /></p>
 <ol class="arabic simple" start="5">
+<li><p>Click on “Action” and then “General” under “Code and automation”.</p></li>
+</ol>
+<p><img alt="Image of the menu on the left side." src="../../_images/actions-general.png" /></p>
+<ol class="arabic simple" start="6">
+<li><p>At the bottom of the page, under “Workflow permissions,” select the option “Read and write permissions” and allow Github Actions to create and approve pull requests. Then, click on save.</p></li>
+</ol>
+<p><img alt="Image of the workflow permissions." src="static/workflow-permissions.png" /></p>
+<ol class="arabic simple" start="7">
 <li><p>Push a new commit to your repo, i.e. make a change to one file (e.g., add a line to your <code class="docutils literal notranslate"><span class="pre">README.md</span></code>).</p></li>
 </ol>
 </section>
 <section id="checking-your-workflow">
 <h3>Checking Your Workflow<a class="headerlink" href="#checking-your-workflow" title="Permalink to this heading">#</a></h3>
-<p>Next, click on “Actions” at the top of your repository. You should see a workflow named “pages and deployment” running. By clicking on this workflow, you’ll be able to view a summary of the process. In the image below, the process is complete, as shown by the green checkmark:</p>
+<p>Next, click on “Actions” at the top of your repository. You should see a workflow named “pages build and deployment” running. By clicking on this workflow, you’ll be able to view a summary of the process. In the image below, the process is complete, as shown by the green checkmark:</p>
 <p><img alt="Image of a completed workflow with a green checkmark." src="../../_images/action_deployment.png" /></p>
 </section>
 <section id="getting-your-link">
@@ -488,6 +496,9 @@ document.write(`
 <p>Once that process has been completed head back over to “Settings” -&gt; “Pages”. At the top, under “GitHub Pages”, you should now find a field that looks like this:</p>
 <p><img alt="Image of the final link that is presented under &quot;GitHub Pages&quot;." src="../../_images/pages_link.png" /></p>
 <p>Click on the link to view your freshly built content website!</p>
+<p><strong>Important:</strong> There’s one final setting you need to adjust: On the same page, where you found the link, select “gh-pages” (instead of “main”) as the branch and save your changes.
+<img alt="Image of the settings under Branch." src="../../_images/gh-pages.png" /></p>
+<p>That’s it! Congratulations to your first course website!</p>
 </section>
 </section>
 <section id="next-section">
