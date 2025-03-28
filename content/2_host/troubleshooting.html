@@ -421,6 +421,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#common-errors">Common Errors</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#missing-workflow-persmissions">Missing Workflow Persmissions</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-chapter">Next Chapter:</a></li>
 </ul>
             </nav>
@@ -442,6 +446,33 @@ checkmark.</p>
 <p><img alt="Image of the workflow that shows, which of the processes failed." src="../../_images/failed-process.png" /></p>
 <p>Clicking on the process will reveal a detailed log of which part of the process failed. Debugging this can be quite unintuitive.</p>
 <p>Therefore, we will show you some common errors and solutions. If the recommended solutions do not work or your error is not mentioned, feel free to contact us either via opening an <a class="reference external" href="https://docs.github.com/en/issues/tracking-your-work-with-issues/creating-an-issue">Issue</a> on the <a class="reference external" href="https://github.com/M-earnest/course_template_diler">course template repo</a> or e-mail and we’ll try to get back to you ASAP.</p>
+<section id="common-errors">
+<h2>Common Errors<a class="headerlink" href="#common-errors" title="Permalink to this heading">#</a></h2>
+<section id="missing-workflow-persmissions">
+<h3>Missing Workflow Persmissions<a class="headerlink" href="#missing-workflow-persmissions" title="Permalink to this heading">#</a></h3>
+<p>If you see this: <code class="docutils literal notranslate"><span class="pre">Error:</span> <span class="pre">Action</span> <span class="pre">failed</span> <span class="pre">with</span> <span class="pre">&quot;The</span> <span class="pre">process</span> <span class="pre">'/usr/bin/git'</span> <span class="pre">failed</span> <span class="pre">with</span> <span class="pre">exit</span> <span class="pre">code</span> <span class="pre">128&quot;</span></code>, you should check the workflow permissions and the branch that GitHub Pages uses.</p>
+<p><img alt="Image of a failed workflow due to missing workflow permissions." src="../../_images/failed_workflow_gh.png" /></p>
+<ol class="arabic simple">
+<li><p>Click on “Settings” in the top tab.</p></li>
+</ol>
+<p><img alt="Image of the tab where the word &quot;Settings&quot; is located on the far right" src="../../_images/settings.png" /></p>
+<ol class="arabic simple" start="2">
+<li><p>Click on “Action” and then “General” under “Code and automation” on the left side.</p></li>
+</ol>
+<p><img alt="Image of the menu on the left side." src="../../_images/actions-general.png" /></p>
+<ol class="arabic simple" start="3">
+<li><p>At the bottom of the page, under “Workflow permissions,” select the option “Read and write permissions” and allow Github Actions to create and approve pull requests. Then, click on save.</p></li>
+</ol>
+<p><img alt="Image of the workflow permissions." src="../../_images/workflow_permissions.png" /></p>
+<ol class="arabic simple" start="4">
+<li><p>Make a change to one file (e.g., add a line to your <code class="docutils literal notranslate"><span class="pre">README.md</span></code>) to trigger the workflow.</p></li>
+<li><p>Click on “Action” in the top tab and check your workflow.</p></li>
+<li><p>As soon as the process is completed,  head over to “Settings” -&gt; “Pages”.</p></li>
+<li><p>Ensure that “gh-pages” is selected (instead of “main”) as the branch.
+<img alt="Image of the settings under Branch." src="../../_images/gh-pages.png" /></p></li>
+</ol>
+</section>
+</section>
 <section id="next-chapter">
 <h2>Next Chapter:<a class="headerlink" href="#next-chapter" title="Permalink to this heading">#</a></h2>
 <p>On the next chapter, you will master the basics of creating and editing files, formatting with Markdown, and embedding media.</p>
@@ -511,6 +542,10 @@ checkmark.</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#common-errors">Common Errors</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#missing-workflow-persmissions">Missing Workflow Persmissions</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-chapter">Next Chapter:</a></li>
 </ul>
   </nav></div>
