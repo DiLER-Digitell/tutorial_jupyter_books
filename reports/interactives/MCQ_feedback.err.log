@@ -1,0 +1,219 @@
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/nbclient/client.py", line 1305, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+  File "/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/asyncio/base_events.py", line 616, in run_until_complete
+    return future.result()
+  File "/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/nbclient/client.py", line 705, in async_execute
+    await self.async_execute_cell(
+  File "/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/nbclient/client.py", line 1058, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/nbclient/client.py", line 914, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+import ipywidgets as widgets
+from IPython.display import display, clear_output, HTML
+
+quiz_data = [
+    {
+        "prompt": "Which measure of central tendency is most affected by outliers?",
+        "options": [
+            "A) Median",
+            "B) Mean",
+            "C) Mode",
+            "D) Range"
+        ],
+        "answer": "B",
+        "feedback": {
+            "A": "No. The median is typically robust against outliers.",
+            "B": "Correct! The mean can shift significantly due to outliers.",
+            "C": "Not quite. The mode represents the most frequent value and is often unaffected by extreme values.",
+            "D": "Range is not a measure of central tendency; it measures the spread between the minimum and maximum."
+        }
+    },
+    {
+        "prompt": "What is the median of the set [3, 5, 6, 8, 10]?",
+        "options": [
+            "A) 5",
+            "B) 6",
+            "C) 6.5",
+            "D) 7"
+        ],
+        "answer": "B",
+        "feedback": {
+            "A": "Close, but 5 is the second value, not the middle in an ordered set of five values.",
+            "B": "Correct! With an odd number of values, the median is the middle one, which is 6 here.",
+            "C": "This would be the median if you had two middle numbers, but this list has five values.",
+            "D": "7 does not appear in the list and isn't in the middle."
+        }
+    },
+    {
+        "prompt": "Which term refers to how spread out data points are from their average value?",
+        "options": [
+            "A) Standard deviation",
+            "B) Correlation coefficient",
+            "C) Average",
+            "D) Median"
+        ],
+        "answer": "A",
+        "feedback": {
+            "A": "Correct! Standard deviation measures how much the data vary around the mean.",
+            "B": "Correlation coefficient measures the linear relationship between two variables.",
+            "C": "Another word for the mean, which is a central tendency, not spread.",
+            "D": "The median is a central tendency measure, not a spread measure."
+        }
+    },
+    {
+        "prompt": "If P(A) = 0.4 and P(B) = 0.5, and A and B are independent events, what is P(A ∩ B)?",
+        "options": [
+            "A) 0.2",
+            "B) 0.4",
+            "C) 0.45",
+            "D) 0.9"
+        ],
+        "answer": "A",
+        "feedback": {
+            "A": "Correct! For independent events, P(A ∩ B) = P(A) × P(B) = 0.4 × 0.5 = 0.2.",
+            "B": "No. That’s just P(A); independence requires multiplying the probabilities.",
+            "C": "This would not be correct; it’s larger than 0.2 and does not reflect independence properly.",
+            "D": "This is too large; definitely not the product of 0.4 and 0.5."
+        }
+    }
+]
+custom_css = HTML("""
+<style>
+    .questions-container {
+        border: 1px solid #ddd;
+        padding: 15px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        background: linear-gradient(to bottom, #fafafa 0%, #ffffff 100%);
+    }
+
+    .question-row {
+        margin: 15px 0;
+    }
+
+    .feedback-card {
+        border: 1px solid #ccc;
+        background: #fefefe;
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: 5px;
+        box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+    }
+    .feedback-error {
+        border: 1px solid #d9534f !important;
+        background: #f9f1f0 !important;
+        color: #d9534f !important;
+    }
+
+    .feedback-correct {
+        border: 1px solid #5cb85c !important;
+        background: #f0fff0 !important;
+        color: #3c763d !important;
+    }
+    .feedback-incorrect {
+        border: 1px solid #d9534f !important;
+        background: #f9f1f0 !important;
+        color: #d9534f !important;
+    }
+
+    .feedback-card h4 {
+        margin-top: 0;
+        color: #2c3e50;
+    }
+
+    .mcq-radio .widget-radio-box {
+        margin: 0 5px 0 0 !important;
+    }
+    .mcq-radio .widget-label {
+        font-size: 0.9rem;
+        color: #444;
+    }
+</style>
+""")
+question_widgets = []
+for q in quiz_data:
+    prompt_html = widgets.HTML(
+        value=f"<b>{q['prompt']}</b>"
+    )
+    radio = widgets.RadioButtons(
+        options=q["options"],
+        value=None,
+        layout=widgets.Layout(width='auto')
+    )
+    radio.add_class("mcq-radio")
+    question_box = widgets.VBox([prompt_html, radio])
+    question_box.add_class("question-row")
+    question_widgets.append((question_box, radio, q))
+questions_box = widgets.VBox([qw[0] for qw in question_widgets])
+questions_box.add_class("questions-container")
+feedback_output = widgets.Output()
+submit_button = widgets.Button(description="Submit", button_style='success')
+retake_button = widgets.Button(description="Retake", button_style='warning')
+def on_submit_click(_):
+    with feedback_output:
+        clear_output()
+        display(HTML("<h2 style='color: #444; margin-bottom:10px;'>Your Results</h2>"))
+        score = 0     
+        for (question_box, radio, q_data) in question_widgets:
+            chosen = radio.value
+            
+            if chosen is None:
+                # No option selected
+                display(HTML(f"""
+                <div class="feedback-card feedback-error">
+                    <h4>{q_data['prompt']}</h4>
+                    <p><strong>No option selected.</strong> Please pick a response.</p>
+                </div>
+                """))
+                continue
+            chosen_letter = chosen.split(')')[0].strip()
+            fb_text = q_data["feedback"].get(chosen_letter, "No feedback available.")           
+            if chosen_letter == q_data["answer"]:
+                score += 1
+                feedback_class = "feedback-correct"
+            else:
+                feedback_class = "feedback-incorrect"          
+            display(HTML(f"""
+            <div class="feedback-card {feedback_class}">
+                <h4>{q_data['prompt']}</h4>
+                <p style="font-style: italic;">You chose: <strong>{chosen}</strong></p>
+                <p>{fb_text}</p>
+            </div>
+            """))
+        
+        display(HTML(f"<h3>Your Score: {score}/{len(question_widgets)}</h3>"))
+def on_retake_click(_):
+    with feedback_output:
+        clear_output()
+    for (question_box, radio, q_data) in question_widgets:
+        radio.value = None
+submit_button.on_click(on_submit_click)
+retake_button.on_click(on_retake_click)
+buttons_box = widgets.HBox([submit_button, retake_button])
+display(custom_css)
+display(questions_box, buttons_box, feedback_output)
+
+------------------
+
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
+Cell [0;32mIn[1], line 1[0m
+[0;32m----> 1[0m [38;5;28;01mimport[39;00m[38;5;250m [39m[38;5;21;01mipywidgets[39;00m[38;5;250m [39m[38;5;28;01mas[39;00m[38;5;250m [39m[38;5;21;01mwidgets[39;00m
+[1;32m      2[0m [38;5;28;01mfrom[39;00m[38;5;250m [39m[38;5;21;01mIPython[39;00m[38;5;21;01m.[39;00m[38;5;21;01mdisplay[39;00m[38;5;250m [39m[38;5;28;01mimport[39;00m display, clear_output, HTML
+[1;32m      4[0m quiz_data [38;5;241m=[39m [
+[1;32m      5[0m     {
+[1;32m      6[0m         [38;5;124m"[39m[38;5;124mprompt[39m[38;5;124m"[39m: [38;5;124m"[39m[38;5;124mWhich measure of central tendency is most affected by outliers?[39m[38;5;124m"[39m,
+[0;32m   (...)[0m
+[1;32m     68[0m     }
+[1;32m     69[0m ]
+
+[0;31mModuleNotFoundError[0m: No module named 'ipywidgets'
+
