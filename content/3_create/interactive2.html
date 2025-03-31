@@ -422,10 +422,10 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectives">Objectives 📍</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-limitations-github-pages">The Limitations GitHub Pages</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#limitations-of-github-pages">Limitations of GitHub Pages</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#enter-mybinder">Enter MyBinder</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-create-a-mybinder-link">How to Create a MyBinder Link</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-the-mybinder-environment">1. Setting up the MyBinder environment</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-the-mybinder-environment">1. Setting Up the MyBinder Environment</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-the-config-yml">2. Changing the <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code></a></li>
 </ul>
 </li>
@@ -434,12 +434,11 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions"><strong>Instructions</strong></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-set-up-your-repository"><strong>Step 1:</strong> Set Up Your repository</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-create-the-interactive-task-you-want"><strong>Step 2:</strong> Create the Interactive Task you Want</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-add-the-notebook-to-github"><strong>Step 3:</strong> Add the Notebook to GitHub</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-create-the-mybinder-link"><strong>Step 4:</strong> Create the MyBinder Link</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-add-the-binder-link-to-your-course-page"><strong>Step 5:</strong>_ Add the Binder Link to Your Course Page</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-add-required-packages"><strong>Step 6:</strong> Add Required Packages</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-set-up-your-repository"><strong>Step 1:</strong> Set Up Your Repository</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-create-the-interactive-task-you-want"><strong>Step 2:</strong> Create the Interactive Task You Want</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-create-the-mybinder-link"><strong>Step 3:</strong> Create the MyBinder Link</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-add-the-binder-link-to-your-course-page"><strong>Step 4:</strong>_ Add the Binder Link to Your Course Page</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-add-required-packages"><strong>Step 5:</strong> Add Required Packages</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mixing-static-content-with-interactive-elements">Mixing Static Content with Interactive Elements</a><ul class="nav section-nav flex-column">
@@ -472,9 +471,9 @@ document.write(`
 <li><p><strong>Use interactivity</strong> to make content more personalized and effective</p></li>
 </ul>
 </section>
-<section id="the-limitations-github-pages">
-<h2>The Limitations GitHub Pages<a class="headerlink" href="#the-limitations-github-pages" title="Permalink to this heading">#</a></h2>
-<p>While GitHub Pages is a powerful way to host educational resources, it is fundamentally a <strong>static site generator</strong>. This means it can render and display <strong>HTML</strong>, <strong>Markdown</strong>, <strong>Jupyter Books</strong>, and and other <strong>media</strong>, but only in <strong>static form</strong>. It cannot execute a code or respond to user input in real time.</p>
+<section id="limitations-of-github-pages">
+<h2>Limitations of GitHub Pages<a class="headerlink" href="#limitations-of-github-pages" title="Permalink to this heading">#</a></h2>
+<p>While GitHub Pages is a powerful way to host educational resources, it is fundamentally a <strong>static site generator</strong>. This means it can render and display <strong>HTML</strong>, <strong>Markdown</strong>, <strong>Jupyter Books</strong>, and other <strong>media</strong>, but only in <strong>static form</strong>. It cannot execute a code or respond to user input in real time.</p>
 <ul class="simple">
 <li><p><strong>Code cells</strong> cannot run directly on a GitHub Pages site.</p></li>
 <li><p><strong>Dynamic visualizations</strong> won’t work natively.</p></li>
@@ -485,7 +484,7 @@ document.write(`
 <section id="enter-mybinder">
 <h2>Enter MyBinder<a class="headerlink" href="#enter-mybinder" title="Permalink to this heading">#</a></h2>
 <p>To overcome the limitations of static sites, <strong>MyBinder</strong> provides an elegant solution.</p>
-<p>MyBinder is a free and open-source service that runs on Jupyter Notebooks <strong>without requiring any local installation</strong>. It allows users to create share <strong>live</strong> versions of notebooks for delivering interactive learning activities. You can configure MyBinder with a specific environment, datasets, and code to ensure reproducibility. You can <strong>create and share a link</strong> that launches a ready-to-use version of your content.</p>
+<p>MyBinder is a free and open-source service that runs on Jupyter Notebooks <strong>without requiring any local installation</strong>. It allows users to create and share <strong>live</strong> versions of notebooks for delivering interactive learning activities. You can configure MyBinder with a specific environment, datasets, and code to ensure reproducibility. You can <strong>create and share a link</strong> that launches a ready-to-use version of your content.</p>
 <p>MyBinder enables:</p>
 <ul class="simple">
 <li><p><strong>Progress check</strong> with short formative questions placed throughout the content</p></li>
@@ -498,19 +497,19 @@ document.write(`
 <p>One of the most powerful features of Jupyter Book is the ability to integrate MyBinder, letting readers run code from the book’s pages with no local setup required.</p>
 <p>Below is a step-by-step guide to setting up MyBinder — and why you may want to do so selectively.</p>
 <section id="setting-up-the-mybinder-environment">
-<h4>1. Setting up the MyBinder environment<a class="headerlink" href="#setting-up-the-mybinder-environment" title="Permalink to this heading">#</a></h4>
+<h4>1. Setting Up the MyBinder Environment<a class="headerlink" href="#setting-up-the-mybinder-environment" title="Permalink to this heading">#</a></h4>
 <ol class="arabic simple">
-<li><p>Go to <span class="xref myst">mybinder.org</span></p></li>
-<li><p>Enter your GitHub reposotory</p></li>
-<li><p>Click <code class="docutils literal notranslate"><span class="pre">Lauch</span></code> to test your environment</p></li>
+<li><p>Go to <span class="xref myst">mybinder.org</span>.</p></li>
+<li><p>Enter your GitHub repository.</p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">launch</span></code> to test your environment.</p></li>
 </ol>
 <img src="https://raw.githubusercontent.com/DiLER-Digitell/tutorial_jupyter_books/main/static/binder_ins_image.png" alt="MyBinder Set-Up" width="1000" height="auto">
 <p>Once it successfully launches, copy the <code class="docutils literal notranslate"><span class="pre">MyBinder</span> <span class="pre">URL</span></code> or <code class="docutils literal notranslate"><span class="pre">Binder</span> <span class="pre">badge</span> <span class="pre">code</span></code>.
-The badge is a clickable image that opens the environment when clicked. You can add this badge to your Jupyter Book’s README or any .md/.ipynb file to give readers direct access.</p>
+The badge is a clickable image that opens the environment when clicked. You can add this badge to your Jupyter Book’s README or any Markdown/Jupyter Notebook file to give readers direct access.</p>
 </section>
 <section id="changing-the-config-yml">
 <h4>2. Changing the <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code><a class="headerlink" href="#changing-the-config-yml" title="Permalink to this heading">#</a></h4>
-<p>To make interactive buttons appear within Jupyter Book pages, modify the <em>config.yml file</em> found in the lecture folder add the following bit of code:</p>
+<p>To make interactive buttons appear within Jupyter Book pages, modify the <code class="docutils literal notranslate"><span class="pre">config.yml</span></code> file found in the lecture folder by adding the following bit of code:</p>
 <div class="highlight-# notranslate"><div class="highlight"><pre><span></span>launch_buttons:
   notebook_interface        : &quot;classic&quot; # Or jupyterlab
   binderhub_url             : &quot;https://mybinder.org&quot;  
@@ -526,18 +525,18 @@ The badge is a clickable image that opens the environment when clicked. You can 
 <section id="why-this-isnt-always-ideal">
 <h3>Why This Isn’t Always Ideal ⚠️<a class="headerlink" href="#why-this-isnt-always-ideal" title="Permalink to this heading">#</a></h3>
 <p>Although making your entire book interactive with Binder is powerful, it also has significant downsides that can affect user experience, performance, and scalability:</p>
-<p>❌ <strong>1. Binder Can Be Slow and Unreliable</strong></p>
+<p>❌ <strong>1. Binder can be slow and unreliable</strong></p>
 <ul class="simple">
 <li><p>Launching Binder can take 30–90 seconds.</p></li>
 <li><p>It runs on limited, shared resources.</p></li>
 <li><p>Sessions may disconnect or time out.</p></li>
 </ul>
-<p>❌ <strong>2. Not All Pages Need Interactivity</strong></p>
+<p>❌ <strong>2. Not all pages need interactivity</strong></p>
 <ul class="simple">
 <li><p>Static pages like theory, instructions, and reading material don’t need an active Binder kernel.</p></li>
 <li><p>Enabling intractivity through Binder on every page adds unnecessary overhead without real benefits.</p></li>
 </ul>
-<p>❌ <strong>3. Launching the Entire Reposotory is not User-Friendly</strong></p>
+<p>❌ <strong>3. Launching the entire repository is not user-friendly</strong></p>
 <ul class="simple">
 <li><p>Binder opens the file browser with all files visible.</p></li>
 <li><p>Learners may not know which file to open or how to proceed.</p></li>
@@ -549,8 +548,8 @@ The badge is a clickable image that opens the environment when clicked. You can 
 <p>Instead of enabling interactivity across your entire course, a more effective approach is to <strong>designate specific notebooks</strong> for interactive elements and place them exactly where they are needed. These notebooks:</p>
 <ul class="simple">
 <li><p><strong>Do not</strong> form part of the main course structure in <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code>.</p></li>
-<li><p><strong>Do</strong> serve targeted purposes like quick demos, progress questions, or simulations.</p></li>
-<li><p><strong>Live</strong> in a separate folder (e.g., <code class="docutils literal notranslate"><span class="pre">extras/</span></code>, <code class="docutils literal notranslate"><span class="pre">binder/</span></code>, or <code class="docutils literal notranslate"><span class="pre">interactives/</span></code>).</p></li>
+<li><p>Do <strong>serve targeted purposes</strong> like quick demos, progress questions, or simulations.</p></li>
+<li><p><strong>Live in a separate folder</strong> (e.g., <code class="docutils literal notranslate"><span class="pre">extras/</span></code>, <code class="docutils literal notranslate"><span class="pre">binder/</span></code>, or <code class="docutils literal notranslate"><span class="pre">interactives/</span></code>).</p></li>
 <li><p><strong>Are linked directly</strong> from relevant sections of your course with explicit Binder links.</p></li>
 </ul>
 <p>This way, readers can quickly launch the notebooks that require interactivity without cluttering or slowing down the entire book. It also provides a more <strong>guided</strong> experience, focusing attention on the exact tasks that benefit from running code.</p>
@@ -568,12 +567,12 @@ The badge is a clickable image that opens the environment when clicked. You can 
 <section id="instructions">
 <h2><strong>Instructions</strong><a class="headerlink" href="#instructions" title="Permalink to this heading">#</a></h2>
 <section id="step-1-set-up-your-repository">
-<h3><strong>Step 1:</strong> Set Up Your repository<a class="headerlink" href="#step-1-set-up-your-repository" title="Permalink to this heading">#</a></h3>
+<h3><strong>Step 1:</strong> Set Up Your Repository<a class="headerlink" href="#step-1-set-up-your-repository" title="Permalink to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>Ensure you have already created and set up your GitHub repository.</p></li>
 <li><p>Inside your repository, create a folder named <code class="docutils literal notranslate"><span class="pre">interactives</span></code>.</p>
 <ul class="simple">
-<li><p>In yout GitHub reposotory, click on <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">File</span></code> → <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">new</span> <span class="pre">file</span></code></p></li>
+<li><p>In your GitHub repository, click on <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">File</span></code> → <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">new</span> <span class="pre">file</span></code></p></li>
 <li><p>In <code class="docutils literal notranslate"><span class="pre">Name</span> <span class="pre">your</span> <span class="pre">file...</span></code> box, enter <code class="docutils literal notranslate"><span class="pre">interactives/.gitkeep.</span></code></p></li>
 <li><p>Click on <code class="docutils literal notranslate"><span class="pre">Commit</span> <span class="pre">Changes</span></code></p></li>
 </ul>
@@ -582,10 +581,10 @@ The badge is a clickable image that opens the environment when clicked. You can 
 <img src="https://raw.githubusercontent.com/DiLER-Digitell/tutorial_jupyter_books/main/static/create_new_folder.png" alt="Create_New_Folder" width="1200" height="auto">
 </section>
 <section id="step-2-create-the-interactive-task-you-want">
-<h3><strong>Step 2:</strong> Create the Interactive Task you Want<a class="headerlink" href="#step-2-create-the-interactive-task-you-want" title="Permalink to this heading">#</a></h3>
+<h3><strong>Step 2:</strong> Create the Interactive Task You Want<a class="headerlink" href="#step-2-create-the-interactive-task-you-want" title="Permalink to this heading">#</a></h3>
 <ol class="arabic simple">
-<li><p>Create a new file: i.e. <code class="docutils literal notranslate"><span class="pre">multiple_choice_task.ipynb</span></code></p></li>
-<li><p>Copy-paste the code for the task you want to create inside your Notebook</p></li>
+<li><p>Create a new Jupyter Notebook file in your ìnteractives<code class="docutils literal notranslate"><span class="pre">folder:</span> <span class="pre">i.e.</span></code>multiple_choice_task.ipynb`.</p></li>
+<li><p>Copy-paste the code for the task you want to create inside your Notebook.</p></li>
 </ol>
 <style>
 
@@ -1202,23 +1201,18 @@ The badge is a clickable image that opens the environment when clicked. You can 
 <!-- End of LS -->
 </div>
 <p>💡 <strong>You only need to edit the dictionary to modify the questions.</strong></p>
-</section>
-<section id="step-3-add-the-notebook-to-github">
-<h3><strong>Step 3:</strong> Add the Notebook to GitHub<a class="headerlink" href="#step-3-add-the-notebook-to-github" title="Permalink to this heading">#</a></h3>
-<p><strong>Optional:</strong> Create markdown cells above or below the code to provide intructions and additional information.</p>
-<ol class="arabic simple">
-<li><p>Save the notebook as <code class="docutils literal notranslate"><span class="pre">multiple_choice_task.ipynb</span></code> (or any other name).</p></li>
-<li><p>Place it inside the <code class="docutils literal notranslate"><span class="pre">interactives</span></code> folder in your GitHub repository.</p></li>
-<li><p><strong>Save</strong> and <strong>Commit</strong> your changes to GitHub.</p></li>
+<ol class="arabic simple" start="3">
+<li><p><strong>Optional:</strong> Create markdown cells above or below the code to provide intructions and additional information.</p></li>
+<li><p>Click on “Commit changes” to save the file.</p></li>
 </ol>
 </section>
-<section id="step-4-create-the-mybinder-link">
-<h3><strong>Step 4:</strong> Create the MyBinder Link<a class="headerlink" href="#step-4-create-the-mybinder-link" title="Permalink to this heading">#</a></h3>
+<section id="step-3-create-the-mybinder-link">
+<h3><strong>Step 3:</strong> Create the MyBinder Link<a class="headerlink" href="#step-3-create-the-mybinder-link" title="Permalink to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>Visit <strong>MyBinder</strong> (<a class="reference external" href="https://mybinder.org">https://mybinder.org</a>)</p></li>
 <li><p>Fill in the following:</p>
 <ul class="simple">
-<li><p>GitHUb repository: <code class="docutils literal notranslate"><span class="pre">https://github.com/your_user_name/your_reposotory</span></code></p></li>
+<li><p>GitHub repository: <code class="docutils literal notranslate"><span class="pre">https://github.com/your_user_name/your_repository</span></code></p></li>
 <li><p>Git ref (branch, tag, or commit): <code class="docutils literal notranslate"><span class="pre">main</span></code></p></li>
 <li><p>File to open (in JupyterLab): <code class="docutils literal notranslate"><span class="pre">voila/render/interactives/multiple_choice_task.ipynb</span></code></p></li>
 <li><p>Make sure to switch from <code class="docutils literal notranslate"><span class="pre">File</span></code> to <code class="docutils literal notranslate"><span class="pre">URL</span></code></p></li>
@@ -1226,17 +1220,24 @@ The badge is a clickable image that opens the environment when clicked. You can 
 </ul>
 </li>
 </ol>
+<p><img alt="Image of the binder section where you need to fill in the information as instructed." src="../../_images/binder_filled.png" /></p>
 </section>
-<section id="step-5-add-the-binder-link-to-your-course-page">
-<h3><strong>Step 5:</strong>_ Add the Binder Link to Your Course Page<a class="headerlink" href="#step-5-add-the-binder-link-to-your-course-page" title="Permalink to this heading">#</a></h3>
-<p>Copy your <strong>Binder URL</strong> and paste it into your course content.</p>
-<p><strong>Example:</strong></p>
-<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>[<span class="nt">Click here to launch the the quiz on Binder</span>](<span class="na">https://mybinder.org/v2/gh/your_username/your_repository/main/?urlpath=voila%2Frender%2Finteractives%2Fmultiple_choice_task.ipynb</span>)
+<section id="step-4-add-the-binder-link-to-your-course-page">
+<h3><strong>Step 4:</strong>_ Add the Binder Link to Your Course Page<a class="headerlink" href="#step-4-add-the-binder-link-to-your-course-page" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Copy your <strong>Binder URL</strong>.</p></li>
+</ol>
+<p><img alt="Image of the binder section where you need to fill in the information as instructed." src="../../_images/binder-link.png" /></p>
+<ol class="arabic simple" start="2">
+<li><p>Paste it into your course content.
+<strong>Example:</strong></p></li>
+</ol>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>[<span class="nt">Click here to launch the quiz on Binder</span>](<span class="na">https://mybinder.org/v2/gh/your_username/your_repository/main/?urlpath=voila%2Frender%2Finteractives%2Fmultiple_choice_task.ipynb</span>)
 </pre></div>
 </div>
 </section>
-<section id="step-6-add-required-packages">
-<h3><strong>Step 6:</strong> Add Required Packages<a class="headerlink" href="#step-6-add-required-packages" title="Permalink to this heading">#</a></h3>
+<section id="step-5-add-required-packages">
+<h3><strong>Step 5:</strong> Add Required Packages<a class="headerlink" href="#step-5-add-required-packages" title="Permalink to this heading">#</a></h3>
 <p>Go to your <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> file in your repository and add the following lines:</p>
 <div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>voila
 ipywidgets
@@ -1268,7 +1269,7 @@ You want <strong>everything in one place</strong> — the explanations, the visu
 <section id="how-to-do-it">
 <h3>How to Do It<a class="headerlink" href="#how-to-do-it" title="Permalink to this heading">#</a></h3>
 <ol class="arabic simple">
-<li><p>Organize your Jupyter notebook like a <strong>chapter</strong>:</p>
+<li><p>Organize your Jupyter Notebook like a <strong>chapter</strong>:</p>
 <ul class="simple">
 <li><p>Title and learning objectives (Markdown)</p></li>
 <li><p>Explanation of the concept (Markdown)</p></li>
@@ -1278,7 +1279,7 @@ You want <strong>everything in one place</strong> — the explanations, the visu
 </ul>
 </li>
 <li><p>Keep everything in one <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> file.</p></li>
-<li><p>Add them to your <code class="docutils literal notranslate"><span class="pre">interactives</span></code> folder in GitHub repository.</p></li>
+<li><p>Add the file to your <code class="docutils literal notranslate"><span class="pre">interactives</span></code> folder.</p></li>
 <li><p>Launch it using <strong>MyBinder</strong> like this:</p></li>
 </ol>
 <div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="gh"># Course Dashboard</span>
@@ -1356,10 +1357,10 @@ You want <strong>everything in one place</strong> — the explanations, the visu
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectives">Objectives 📍</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-limitations-github-pages">The Limitations GitHub Pages</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#limitations-of-github-pages">Limitations of GitHub Pages</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#enter-mybinder">Enter MyBinder</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-create-a-mybinder-link">How to Create a MyBinder Link</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-the-mybinder-environment">1. Setting up the MyBinder environment</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-the-mybinder-environment">1. Setting Up the MyBinder Environment</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-the-config-yml">2. Changing the <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code></a></li>
 </ul>
 </li>
@@ -1368,12 +1369,11 @@ You want <strong>everything in one place</strong> — the explanations, the visu
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions"><strong>Instructions</strong></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-set-up-your-repository"><strong>Step 1:</strong> Set Up Your repository</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-create-the-interactive-task-you-want"><strong>Step 2:</strong> Create the Interactive Task you Want</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-add-the-notebook-to-github"><strong>Step 3:</strong> Add the Notebook to GitHub</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-create-the-mybinder-link"><strong>Step 4:</strong> Create the MyBinder Link</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-add-the-binder-link-to-your-course-page"><strong>Step 5:</strong>_ Add the Binder Link to Your Course Page</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-add-required-packages"><strong>Step 6:</strong> Add Required Packages</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-set-up-your-repository"><strong>Step 1:</strong> Set Up Your Repository</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-create-the-interactive-task-you-want"><strong>Step 2:</strong> Create the Interactive Task You Want</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-create-the-mybinder-link"><strong>Step 3:</strong> Create the MyBinder Link</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-add-the-binder-link-to-your-course-page"><strong>Step 4:</strong>_ Add the Binder Link to Your Course Page</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-add-required-packages"><strong>Step 5:</strong> Add Required Packages</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mixing-static-content-with-interactive-elements">Mixing Static Content with Interactive Elements</a><ul class="nav section-nav flex-column">
