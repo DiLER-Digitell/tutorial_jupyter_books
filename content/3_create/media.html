@@ -458,18 +458,16 @@ document.write(`
 <p>Example: <code class="docutils literal notranslate"><span class="pre">![Image</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">DiLER</span> <span class="pre">project</span> <span class="pre">logo](../../static/logo.png)</span></code></p>
 <p>Result:</p>
 <p><img alt="Image of the DiLER project logo" src="../../_images/logo.png" /></p>
-<p>Alternatively, you can include the image link as follows:
-<code class="docutils literal notranslate"><span class="pre">![alternative_imagetext](https://YOURGITHUBNAME.github.io/PROJECTNAME/static/FILENAME.png)</span></code></p>
+<p>Alternatively, you can include the image link leading to files in you repo as follows:</p>
+<p><code class="docutils literal notranslate"><span class="pre">![alternative_imagetext](https://github.com/[your-github-name]/[your-repo-name]/blob/main/static/[filename].png?raw=true)</span></code></p>
 <p>As you are able to use essentially any image link, you can add images that are hosted through other websites, too!</p>
 </section>
 <section id="using-html">
 <h3>Using HTML<a class="headerlink" href="#using-html" title="Permalink to this heading">#</a></h3>
 <p>If you want more control about the size, orientation and more, you will have to rely on HTML tags. E.g. the following line of code will present the same image as above only downscaled to a width of 200 pixels.</p>
-<p><code class="docutils literal notranslate"><span class="pre">&lt;img</span> <span class="pre">src=&quot;https://DiLER-Digitell.github.io/tutorial_jupyter_books/static/logo.png&quot;</span> <span class="pre">alt=&quot;Image</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">DiLER</span> <span class="pre">project</span> <span class="pre">logo&quot;</span> <span class="pre">class=&quot;bg-primary</span> <span class="pre">mb-1&quot;</span> <span class="pre">width=&quot;200px&quot;&gt;</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;img</span> <span class="pre">src=&quot;https://github.com/DiLER-Digitell/tutorial_jupyter_books/blob/main/static/logo.png?raw=true&quot;</span> <span class="pre">alt=&quot;Image</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">DiLER</span> <span class="pre">project</span> <span class="pre">logo&quot;</span> <span class="pre">class=&quot;bg-primary</span> <span class="pre">mb-1&quot;</span> <span class="pre">width=&quot;200px&quot;&gt;</span></code></p>
 <p>which results in:</p>
-<img src="https://DiLER-Digitell.github.io/tutorial_jupyter_books/static/logo.png" alt="Image of the DiLER project logo" class="bg-primary mb-1" width="200px">
-<img src="../../static/logo.png" alt="Image of the DiLER project logo" class="bg-primary mb-1" width="200px">
-<img src="https://felixkoerber.github.io/jb/_static/logo.png" alt="logo" class="bg-primary mb-1" width="200px"> 
+<img src="https://github.com/DiLER-Digitell/tutorial_jupyter_books/blob/main/static/logo.png?raw=true" alt="Image of the DiLER project logo" class="bg-primary mb-1" width="200px">
 <hr class="docutils" />
 <p><strong>The code above is made up of multiple html keywords, that each control a separate parameter of the image you want to control:</strong></p>
 <table class="colwidths-auto table">
@@ -480,19 +478,19 @@ document.write(`
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;img&gt;</span></code></p></td>
-<td><p>an HTML tag used to display an image on a web page.</p></td>
+<td><p>An HTML tag used to display an image on a web page.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">src=&quot;../../static/logo.png&quot;</span></code></p></td>
-<td><p>an attribute that specifies the URL or path to the image file you want to display.</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">src</span></code></p></td>
+<td><p>An attribute that specifies the URL of the image file you want to display.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">alt=&quot;Image</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">DiLER</span> <span class="pre">project</span> <span class="pre">logo&quot;</span></code></p></td>
-<td><p>an attribute that provides alternative text for the image. This text is used by screen readers for visually impaired users, and it is also displayed when the image cannot be loaded for some reason.</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">alt</span></code></p></td>
+<td><p>An attribute that provides alternative text for the image. This text is used by screen readers for visually impaired users, and it is also displayed when the image cannot be loaded for some reason.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">class=&quot;bg-primary</span> <span class="pre">mb-1&quot;</span></code></p></td>
-<td><p>an attribute that defines the CSS class or classes to apply to the image. In this case, the class bg-primary sets the background color of the image to a primary color, and mb-1 adds a margin-bottom of 1 unit to the image.</p></td>
+<td><p>An attribute that defines the CSS class or classes to apply to the image. In this case, the class bg-primary sets the background color of the image to a primary color, and mb-1 adds a margin-bottom of 1 unit to the image.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">width=&quot;200px&quot;</span></code></p></td>
-<td><p>an attribute that sets the width of the image to 200 pixels. This can be adjusted to suit your needs.</p></td>
+<td><p>An attribute that sets the width of the image to 200 pixels. This can be adjusted to suit your needs.</p></td>
 </tr>
 </tbody>
 </table>
