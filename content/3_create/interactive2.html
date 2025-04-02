@@ -587,7 +587,43 @@ The badge is a clickable image that opens the environment when clicked. You can 
 <section id="step-2-create-the-interactive-task-you-want">
 <h3><strong>Step 2:</strong> Create the Interactive Task You Want<a class="headerlink" href="#step-2-create-the-interactive-task-you-want" title="Permalink to this heading">#</a></h3>
 <ol class="arabic simple">
-<li><p>Create a new Jupyter Notebook file in your <code class="docutils literal notranslate"><span class="pre">interactives</span></code> folder: i.e. <code class="docutils literal notranslate"><span class="pre">multiple_choice_task.ipynb</span></code>.</p></li>
+<li><p>Create a new Jupyter Notebook file, i.e. <code class="docutils literal notranslate"><span class="pre">multiple_choice_task.ipynb</span></code>.</p></li>
+</ol>
+<div class="google-colab-section">
+  <style>
+    .google-colab-section details {
+      background-color: #f2f2f2;
+      border-radius: 6px;
+      width: 100%;
+      max-width: 400px;
+      margin-left: 45px;
+    }
+    .google-colab-section summary {
+      font-size: 1em; 
+      background-color: #f2f2f2;
+      color: #333;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+      margin: 0;
+    }
+    .google-colab-section summary:hover {
+      background-color: #e0e0e0;
+    }
+  </style>
+  <details>
+    <summary>⚠️ Don't have Jupyter Notebooks installed?</summary>
+    <p><strong>Alternative: </strong>Use Google Colab (no installation needed):</p>
+    <ol>
+      <li>Go to <a href="https://colab.research.google.com" target="_blank">colab.research.google.com</a></li>
+      <li>Click <strong>"New Notebook"</strong></li>
+      <li>Paste your provided code</li>
+      <li>Edit as needed</li>
+      <li>Click <strong>File > Save a copy in Drive</strong></li>
+    </ol>
+    <p> <strong>Note. </strong>A Google account is required.</p>
+  </details>
+</div>
+<ol class="arabic simple" start="2">
 <li><p>Copy-paste the code for the task you want to create inside your Notebook.</p></li>
 </ol>
 <style>
@@ -642,7 +678,7 @@ The badge is a clickable image that opens the environment when clicked. You can 
   <strong><u>NOTE</u>:</strong>
     <p style="color: rgb(0, 0, 0);">By adjusting the code below, you should be able to create something like this:</p>
   <p>
-    <a href="https://mybinder.org/v2/gh/DiLER-Digitell/tutorial_jupyter_books/main/?urlpath=voila%2Frender%2Finteractives%2FMCQ_feedback.ipynb" style="color: #e67e22; font-size: 1.2em; font-weight: bold; text-decoration: none;">👉 Launch Multiple-Choice Quiz on MyBinder</a>
+    <a href="https://mybinder.org/v2/gh/DiLER-Digitell/tutorial_jupyter_books/main/?urlpath=voila%2Frender%2Finteractives%2FMCQ_feedback.ipynb" target="_blank"; style="color: #e67e22; font-size: 1.2em; font-weight: bold; text-decoration: none;">👉 Launch Multiple-Choice Quiz on MyBinder</a>
   </p>
 </div>
 <div style="margin-left: 45px; max-height:400px; overflow:auto;">
@@ -865,7 +901,7 @@ The badge is a clickable image that opens the environment when clicked. You can 
   <strong><u>NOTE</u>:</strong>
     <p style = "color:rgb(0, 0, 0);">By adjusting the code below, you should be able to create something like this:</p>
   <p>
-    <a href="https://mybinder.org/v2/gh/DiLER-Digitell/tutorial_jupyter_books/main/?urlpath=voila%2Frender%2Finteractives%2FOEQ_feedback.ipynb" style="color: #e67e22; font-size: 1.2em; font-weight: bold; text-decoration: none;">👉 Launch Quiz with Open-Ended Questions on MyBinder</a>
+    <a href="https://mybinder.org/v2/gh/DiLER-Digitell/tutorial_jupyter_books/main/?urlpath=voila%2Frender%2Finteractives%2FOEQ_feedback.ipynb" target="_blank"; style="color: #e67e22; font-size: 1.2em; font-weight: bold; text-decoration: none;">👉 Launch Quiz with Open-Ended Questions on MyBinder</a>
   </p>
 </div>
 <div style="margin-left: 45px; max-height:400px; overflow:auto;">
@@ -1047,7 +1083,7 @@ The badge is a clickable image that opens the environment when clicked. You can 
     <p style= "color:rgb(0, 0, 0);">By adjusting the code below, you should be able to create something like this:</p>
     </p>
   <p>
-    <a href="https://mybinder.org/v2/gh/DiLER-Digitell/tutorial_jupyter_books/main/?urlpath=voila%2Frender%2Finteractives%2Flikert_feedback.ipynb" style="color: #e67e22; font-size: 1.2em; font-weight: bold; text-decoration: none;">👉 Launch Progress Questions with Likert Scales on MyBinder</a>
+    <a href="https://mybinder.org/v2/gh/DiLER-Digitell/tutorial_jupyter_books/main/?urlpath=voila%2Frender%2Finteractives%2Flikert_feedback.ipynb" target="_blank"; style="color: #e67e22; font-size: 1.2em; font-weight: bold; text-decoration: none;">👉 Launch Progress Questions with Likert Scales on MyBinder</a>
   </p>
 </div>
 <div style="margin-left: 45px; max-height:400px; overflow:auto;">
@@ -1191,7 +1227,6 @@ The badge is a clickable image that opens the environment when clicked. You can 
 <span class="k">def</span><span class="w"> </span><span class="nf">on_retake_click</span><span class="p">(</span><span class="n">_</span><span class="p">):</span>
     <span class="k">with</span> <span class="n">feedback_output</span><span class="p">:</span>
         <span class="n">clear_output</span><span class="p">()</span>
-    <span class="c1"># Reset all toggles</span>
     <span class="k">for</span> <span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="n">toggles</span><span class="p">,</span> <span class="n">_</span><span class="p">)</span> <span class="ow">in</span> <span class="n">question_widgets</span><span class="p">:</span>
         <span class="n">toggles</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="n">submit_button</span><span class="o">.</span><span class="n">on_click</span><span class="p">(</span><span class="n">on_submit_click</span><span class="p">)</span>
@@ -1207,7 +1242,7 @@ The badge is a clickable image that opens the environment when clicked. You can 
 <p>💡 <strong>You only need to edit the dictionary to modify the questions.</strong></p>
 <ol class="arabic simple" start="3">
 <li><p><strong>Optional:</strong> Create markdown cells above or below the code to provide intructions and additional information.</p></li>
-<li><p>Click on “Commit changes” to save the file.</p></li>
+<li><p>Add an <code class="docutils literal notranslate"><span class="pre">ipynb</span></code> file to the <code class="docutils literal notranslate"><span class="pre">interactives</span></code> folder in your repository and click on <strong>Commit changes</strong></p></li>
 </ol>
 </section>
 <section id="step-3-create-the-mybinder-link">
